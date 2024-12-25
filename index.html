@@ -18,6 +18,42 @@
             align-items: center;
             height: 100vh;
             cursor: url('imagens/meu-cursor.png'), auto; /* Cursor padrão */
+            position: relative; /* Para o posicionamento das estrelas */
+        }
+
+        .star-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none; /* Para que as estrelas não interfiram com outros elementos */
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .line {
+            position: absolute;
+            width: 1px; /* Largura da linha */
+            background: rgba(255, 255, 255, 0.5); /* Cor da linha */
+            pointer-events: none; /* Para que as linhas não interfiram com outros elementos */
+            transition: opacity 0.3s; /* Efeito de transição */
         }
 
         .content {
@@ -127,15 +163,15 @@
         }
 
         @media (max-width: 600px) {
-        .music-player iframe {
-        width: 100%; /* Ajusta a largura para 100% em telas menores */
-        height: 80px; /* Ajusta a altura para 80px */
-    }
-
-}
+            .music-player iframe {
+                width: 100%; /* Ajusta a largura para 100% em telas menores */
+                height: 80px; /* Ajusta a altura para 80px */
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="star-container"></div>
     <div class="gif-container">
         <img src="https://media.discordapp.net/attachments/1249433619500630027/1321359118698545243/a23d9a2309779b7d8c914ffcde04669b.gif?ex=676cf313&is=676ba193&hm=e6ad93b7ac899c9036778ae0c297562e3a6b5929f7e1141d76471b5e2659571e&=" alt="Animated GIF">
     </div>
@@ -163,9 +199,9 @@
 
         <div class="button-container">
             <a href="https://discord.com/users/1005328428750344293" class="btn">/discord</a>
-            <a href="contactsolid@lovetits.lol" class="btn">/mail</a>
+            <a href="mailto:contactsolid@lovetits.lol" class="btn">/mail</a>
             <a href="https://github.com/solidyy" class="btn">/github</a>
-            <a href="https://steamcommunity.com/id/sol1dy/" class="btn">/steam</a>
+            <a href=" https://steamcommunity.com/id/sol1dy/" class="btn">/steam</a>
         </div>
 
         <div class="music-player" style="margin-top: 30px;">
@@ -177,14 +213,50 @@
                     allow="encrypted-media"
                     style="filter: grayscale(100%);">
             </iframe>
-
         </div>
-
-
-
     </div>
 
     <script>
+// Inicializa a lista de estrelas
+const stars = []; 
+const starContainer = document.querySelector('.star-container'); // Seleciona o contêiner de estrelas
+
+// Defina um limite máximo de estrelas
+const maxStars = 30; // Número máximo de estrelas na tela
+
+// Função para criar estrelas
+function createStar() {
+    // Verifica se o número atual de estrelas é menor que o máximo permitido
+    if (stars.length < maxStars) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+
+        // Define a posição inicial da estrela
+        const x = Math.random() * 100; // Posição horizontal aleatória
+        const y = Math.random() * 100; // Posição vertical aleatória
+        star.style.left = x + 'vw';
+        star.style.top = y + 'vh';
+        star.style.width = Math.random() * 3 + 2 + 'px'; // Tamanho aleatório
+        star.style.height = star.style.width; // Mantém a proporção
+
+        // Define a duração da animação
+        const fallDuration = Math.random() * 3 + 2; // Duração entre 2s e 5s
+        star.style.animationDuration = fallDuration + 's';
+
+        // Adiciona a estrela ao contêiner
+        starContainer.appendChild(star);
+        stars.push(star);
+
+        // Remove a estrela após a animação
+        star.addEventListener('animationend', () => {
+            star.remove();
+            stars.splice(stars.indexOf(star), 1); // Remove a estrela do array
+        });
+    }
+}
+
+// Cria estrelas em intervalos regulares
+setInterval(createStar, 500); // Cria uma nova estrela a cada 500ms
         // Função para reiniciar a animação
         function restartAnimation() {
             const letters = document.querySelectorAll('.letter');
@@ -196,8 +268,7 @@
             });
         }
 
-        // Reinicia a animação ```html
-        // a cada 15 segundos
+        // Reinicia a animação a cada 15 segundos
         setInterval(restartAnimation, 15000);
     </script>
 </body>
