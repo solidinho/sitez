@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>love tits?</title>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1249433619500630026/1321388072176324638/34391e40a5e88b82047953c5efe260b9.png?ex=676d0e0a&is=676bbc8a&hm=8badf380080fe7c0460399cf562d51d420159502f1dd335da139bb6b90dc1c7b&" type="image/png">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1249433619500630026/1321388072176324638/34391e40a5e88b82047953c5efe260b9.png?ex=676d0e0a&is=676bbc8a&hm=8badf380080fe7c0460399cf562d51d420159502f1dd335da139bb6b90dc1c7b&" type="image/png"> <!-- Favicon -->
     <style>
         body {
-            font-family: 'Monaco', 'Courier New', monospace;
+            font-family: 'Monaco', 'Courier New', monospace; /* Usando Monaco e fontes alternativas */
             margin: 0;
             padding: 0;
-            background: #000;
-            color: #aaa;
+            background: #000; /* Fundo preto */
+            color: #aaa; /* Texto cinza claro */
             text-align: center;
             display: flex;
-            flex-direction: column; /* Altera para coluna em telas menores */
             justify-content: center;
             align-items: center;
             height: 100vh;
-            cursor: url('imagens/meu-cursor.png'), auto;
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor padrão */
         }
 
         .content {
@@ -26,70 +25,120 @@
         }
 
         header {
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Ajustado para centralizar melhor */
+        }
+
+        /* Animação para as letras do título */
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: appear 0.5s forwards;
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         header h1 {
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Diminuído o tamanho do título */
             margin: 0;
             color: #fff;
             letter-spacing: -0.02em;
         }
 
         header p {
-            font-size: 1rem;
-            margin: 5px 0 0;
-            color: #888;
+            font-size: 1rem; /* Diminuído o tamanho da descrição */
+            margin: 5px 0 0; /* Ajustado o espaçamento */
+            color: #888; /* Texto cinza escuro */
+            animation: fadeIn 1s ease forwards; /* Animação da descrição */
+            animation-delay: 0.5s; /* Atraso na animação da descrição */
+        }
+
+        header img {
+            width: 150px; /* Diminuído o tamanho da imagem */
+            height: 150px; /* Diminuído o tamanho da imagem */
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
         }
 
         .button-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 15px; /* Ajustado o espaçamento entre os botões */
         }
 
         .btn {
-            background: #111;
-            color: #ccc;
-            padding:  10px 20px;
-            font-size: 1rem;
+            background: #111; /* Fundo do botão */
+            color: #ccc; /* Texto do botão */
+            padding: 10px 20px; /* Diminuído o padding */
+            font-size: 1rem; /* Diminuído o tamanho da fonte */
             font-weight: bold;
             border: none;
             border-radius: 8px;
-            cursor: url('imagens/meu-cursor.png'), auto;
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor padrão */
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none; /* Remove o sublinhado dos links */
         }
 
-        .music-player iframe {
-            width: 100%; /* Ajusta a largura para 100% em telas menores */
-            height: 100px; /* Mantém a altura */
-            filter: grayscale(100%); /* Aplica o filtro de escala de cinza */
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+            transition: 0.4s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: #222; /* Fundo do botão ao passar o mouse */
+            color: #fff; /* Texto do botão ao passar o mouse */
+            transform: scale(1.05);
+            cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
+        }
+
+        .gif-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 400px; /* Diminuído o tamanho do GIF */
+            height: 400px; /* Diminuído o tamanho do GIF */
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Mantém a proporção da imagem */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.2rem; /* Ajusta o tamanho do título */
-            }
+        .music-player iframe {
+        width: 100%; /* Ajusta a largura para 100% em telas menores */
+        height: 80px; /* Ajusta a altura para 80px */
+    }
 
-            header p {
-                font-size: 0.9rem; /* Ajusta o tamanho da descrição */
-            }
-
-            .btn {
-                padding: 8px 15px; /* Ajusta o padding dos botões */
-                font-size: 0.9rem; /* Ajusta o tamanho da fonte dos botões */
-            }
-
-            .music-player iframe {
-                height: 80px; /* Ajusta a altura do player em telas menores */
-            }
-        }
+}
     </style>
 </head>
 <body>
+    <div class="gif-container">
+        <img src="https://media.discordapp.net/attachments/1249433619500630027/1321359118698545243/a23d9a2309779b7d8c914ffcde04669b.gif?ex=676cf313&is=676ba193&hm=e6ad93b7ac899c9036778ae0c297562e3a6b5929f7e1141d76471b5e2659571e&=" alt="Animated GIF">
+    </div>
     <div class="content">
         <header>
             <img src="imagens/lelouch.gif" alt ="Header Image">
@@ -125,9 +174,14 @@
                     height="180" 
                     frameborder="0" 
                     allowtransparency="true" 
-                    allow="encrypted-media">
+                    allow="encrypted-media"
+                    style="filter: grayscale(100%);">
             </iframe>
+
         </div>
+
+
+
     </div>
 
     <script>
@@ -142,7 +196,8 @@
             });
         }
 
-        // Reinicia a animação a cada 15 segundos
+        // Reinicia a animação ```html
+        // a cada 15 segundos
         setInterval(restartAnimation, 15000);
     </script>
 </body>
