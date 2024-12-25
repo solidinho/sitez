@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love tits?</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1249433619500630026/1321388072176324638/34391e40a5e88b82047953c5efe260b9.png?ex=676d0e0a&is=676bbc8a&hm=8badf380080fe7c0460399cf562d51d420159502f1dd335da139bb6b90dc1c7b&" type="image/png">
+    <style>
+        body {
+            font-family: 'Monaco', 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #aaa;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Altera para coluna em telas menores */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            cursor: url('imagens/meu-cursor.png'), auto;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 5px 0 0;
+            color: #888;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            background: #111;
+            color: #ccc;
+            padding:  10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: url('imagens/meu-cursor.png'), auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            text-decoration: none;
+        }
+
+        .music-player iframe {
+            width: 100%; /* Ajusta a largura para 100% em telas menores */
+            height: 100px; /* Mantém a altura */
+            filter: grayscale(100%); /* Aplica o filtro de escala de cinza */
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.2rem; /* Ajusta o tamanho do título */
+            }
+
+            header p {
+                font-size: 0.9rem; /* Ajusta o tamanho da descrição */
+            }
+
+            .btn {
+                padding: 8px 15px; /* Ajusta o padding dos botões */
+                font-size: 0.9rem; /* Ajusta o tamanho da fonte dos botões */
+            }
+
+            .music-player iframe {
+                height: 80px; /* Ajusta a altura do player em telas menores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <img src="imagens/lelouch.gif" alt ="Header Image">
+            <h1>
+                <span class="letter" style="animation-delay: 0s;">h</span>
+                <span class="letter" style="animation-delay: 0.1s;">e</span>
+                <span class="letter" style="animation-delay: 0.2s;">l</span>
+                <span class="letter" style="animation-delay: 0.3s;">l</span>
+                <span class="letter" style="animation-delay: 0.4s;">o</span>
+                <span class="letter" style="animation-delay: 0.5s;"></span>
+                <span class="letter" style="animation-delay: 0.6s;">u</span>
+                <span class="letter" style="animation-delay: 0.7s;">n</span>
+                <span class="letter" style="animation-delay: 0.8s;">k</span>
+                <span class="letter" style="animation-delay: 0.9s;">n</span>
+                <span class="letter" style="animation-delay: 1.0s;">o</span>
+                <span class="letter" style="animation-delay: 1.1s;">w</span>
+                <span class="letter" style="animation-delay: 1.2s;">n</span>
+                <span class="letter" style="animation-delay: 1.3s;">!</span>
+            </h1>
+            <p>I'm Solidy, just a dev doing some nonsense.</p>
+        </header>
+
+        <div class="button-container">
+            <a href="https://discord.com/users/1005328428750344293" class="btn">/discord</a>
+            <a href="contactsolid@lovetits.lol" class="btn">/mail</a>
+            <a href="https://github.com/solidyy" class="btn">/github</a>
+            <a href="https://steamcommunity.com/id/sol1dy/" class="btn">/steam</a>
+        </div>
+
+        <div class="music-player" style="margin-top: 30px;">
+            <iframe src="https://open.spotify.com/embed/track/13WHJ25xY3CekEyP5q8tNo?si=062ba1ff003d43fc" 
+                    width="400" 
+                    height="180" 
+                    frameborder="0" 
+                    allowtransparency="true" 
+                    allow="encrypted-media">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // Função para reiniciar a animação
+        function restartAnimation() {
+            const letters = document.querySelectorAll('.letter');
+            letters.forEach((letter, index) => {
+                letter.style.animation = 'none'; // Remove a animação
+                letter.offsetHeight; // Força a reflow
+                letter.style.animation = `appear 0.5s forwards`; // Reaplica a animação
+                letter.style.animationDelay = `${index * 0.1}s`; // Define o atraso para cada letra
+            });
+        }
+
+        // Reinicia a animação a cada 15 segundos
+        setInterval(restartAnimation, 15000);
+    </script>
+</body>
+</html>
