@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1249433619500630026/1321388072176324638/34391e40a5e88b82047953c5efe260b9.png?ex=676d0e0a&is=676bbc8a&hm=8badf380080fe7c0460399cf562d51d420159502f1dd335da139bb6b90dc1c7b&" type="image/png"> <!-- Favicon -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000; /* Fundo preto */
+            color: #aaa; /* Texto cinza claro */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado para a página */
+            position: relative;
+            overflow: hidden; /* Evita áreas não desejadas fora da tela */
+            flex-direction: column; /* Organiza o conteúdo verticalmente */
+        }
+
+        .content {
+            position: relative;
+            z-index: 2; /* Garante que o conteúdo fique acima de qualquer outro elemento */
+            width: 100%;
+            max-width: 900px; /* Limita a largura do conteúdo */
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 50px; /* Espaço para os botões não ficarem colados no final */
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .about-me {
+            color: #ccc;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+
+        .about-me h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .about-me p {
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Aumenta o espaçamento entre os botões */
+            position: absolute;
+            bottom: 20px; /* Posiciona os botões na parte inferior */
+            width: 100%;
+            z-index: 3;
+        }
+
+        /* Botão semelhante ao do index.html */
+        .btn-bottom {
+            color: #fff;
+            font-size: 1.3rem; /* Diminuído um pouco o tamanho do botão */
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid transparent;
+            padding: 12px 25px; /* Diminuído o padding */
+            border-radius: 10px;
+            background-color: transparent; /* Fundo transparente */
+            transition: all 0.3s ease;
+            overflow: hidden;
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
+        }
+
+        .btn-bottom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background: linear-gradient(90deg, #333, #111, #333); /* Gradiente preto */
+            background-size: 200%;
+            z-index: -1;
+            transition: all 0.4s;
+            animation: gradient-border 3s infinite;
+        }
+
+        @keyframes gradient-border {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-bottom:hover {
+            color: #fff; /* Texto branco */
+            border-color: transparent; /* Mantém a borda transparente no hover */
+            transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+            cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
+        }
+
+        .btn-bottom .arrow {
+            margin-left: 10px;
+            opacity: 1; /* Deixa a seta visível */
+            transform: translateX(0); /* Remove a animação de movimento */
+        }
+
+        /* Alinha os botões lado a lado */
+        .button-container a {
+            position: relative;
+        }
+
+        /* Invertendo a direção das setas */
+        .btn-left .arrow {
+            transform: rotate(180deg); /* Gira a seta da esquerda */
+        }
+
+        .btn-right .arrow {
+            transform: rotate(0deg); /* Mantém a seta da direita normal */
+        }
+
+        @media (max-width: 600px) {
+            .about-me {
+                font-size: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .btn-bottom {
+                padding: 10px 20px; /* Botões um pouco menores em telas pequenas */
+                font-size: 1.2rem;
+            }
+
+            .btn-bottom .arrow {
+                font-size: 1.2rem; /* Ajusta o tamanho da seta em telas menores */
+            }
+        }
+.foto-perfil {
+  width: 150px; /* Tamanho da imagem */
+  height: 150px;
+  border-radius: 50%; /* Faz a imagem ficar circular */
+  object-fit: cover; /* Garante que a imagem seja cortada para se ajustar ao círculo */
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <header class="header">
+            <img src="imagens/loli.gif" alt="Foto de perfil" class="foto-perfil">
+            <h1>/about me</h1>
+            <p>Victor, 16y — Brazil, Espírito Santo.</p>
+        </header>
+
+        <div class="about-me">
+            <h2>Who am I?</h2>
+            <p>Just a programmer trying to make some projects.</p>
+
+            <h2>What do I do?</h2>
+            <p>Currently, I develop intelligent machines (using AI) and work on projects.</p>
+
+            <h2>Myself</h2>
+            <p>I am a 16-year-old junior programmer with a strong interest in back-end development. I am also familiar with front-end technologies and enjoy working on both sides of development. My skills include languages such as Python, JavaScript (with Node.js for back-end development), PHP, SQL, HTML, CSS, and I am comfortable using frameworks like React.</p> 
+            <span style="display: block;">𝘐’𝘷𝘦 𝘣𝘦𝘦𝘯 𝘵𝘳𝘺𝘪𝘯𝘨 𝘵𝘰 𝘭𝘦𝘢𝘳𝘯 𝘑𝘢𝘷𝘢 𝘧𝘰𝘳 𝘭𝘪𝘬𝘦 𝘢 𝘺𝘦𝘢𝘳 𝘯𝘰𝘸, 𝘭𝘰𝘭. 𝘚𝘵𝘪𝘭𝘭 𝘢 𝘸𝘰𝘳𝘬 𝘪𝘯 𝘱𝘳𝘰𝘨𝘳𝘦𝘴𝘴! -_-
+        </div>
+    </div>
+
+    <div class="button-container">
+        <!-- Botão de Voltar -->
+        <a href="index.html" class="btn-bottom btn-left">
+            ←  Back
+        </a>
+        <!-- Botão de Próxima Página -->
+        <a href="" class="btn-bottom btn-right">
+            Next  →
+        </a>
+    </div>
+
+</body>
+</html>

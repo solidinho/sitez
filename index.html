@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>love tits?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1249433619500630026/1321388072176324638/34391e40a5e88b82047953c5efe260b9.png?ex=676d0e0a&is=676bbc8a&hm=8badf380080fe7c0460399cf562d51d420159502f1dd335da139bb6b90dc1c7b&" type="image/png"> <!-- Favicon -->
     <style>
         body {
-            font-family: 'Monaco', 'Courier New', monospace; /* Usando Monaco e fontes alternativas */
+            font-family: 'Poppins', sans-serif; /* Usando Monaco e fontes alternativas */
             margin: 0;
             padding: 0;
             background: #000; /* Fundo preto */
@@ -172,18 +173,15 @@
 </head>
 <body>
     <div class="star-container"></div>
-    <div class="gif-container">
-        <img src="https://media.discordapp.net/attachments/1249433619500630027/1321359118698545243/a23d9a2309779b7d8c914ffcde04669b.gif?ex=676cf313&is=676ba193&hm=e6ad93b7ac899c9036778ae0c297562e3a6b5929f7e1141d76471b5e2659571e&=" alt="Animated GIF">
-    </div>
     <div class="content">
         <header>
             <img src="imagens/lelouch.gif" alt ="Header Image">
             <h1>
-                <span class="letter" style="animation-delay: 0s;">h</span>
+                <span class="letter" style="animation-delay: 0s;">H</span>
                 <span class="letter" style="animation-delay: 0.1s;">e</span>
                 <span class="letter" style="animation-delay: 0.2s;">l</span>
                 <span class="letter" style="animation-delay: 0.3s;">l</span>
-                <span class="letter" style="animation-delay: 0.4s;">o</span>
+                <span class="letter" style="animation-delay: 0.4s;">o,</span>
                 <span class="letter" style="animation-delay: 0.5s;"></span>
                 <span class="letter" style="animation-delay: 0.6s;">u</span>
                 <span class="letter" style="animation-delay: 0.7s;">n</span>
@@ -215,6 +213,67 @@
             </iframe>
         </div>
     </div>
+
+<!-- Botão inferior -->
+<a href="sobre.html" class="btn-bottom">Next Page <span class="arrow">→</span></a>
+
+<style>
+/* Botão inferior */
+.btn-bottom {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância da parte inferior */
+    left: 20; /* Centraliza o botão horizontalmente */
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: transparent; /* Fundo transparente */
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
+}
+
+.btn-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #333, #111, #333); /* Gradiente preto */
+    background-size: 200%;
+    z-index: -1;
+    transition: all 0.4s;
+    animation: gradient-border 3s infinite;
+}
+
+@keyframes gradient-border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Alterado o hover para não mexer no layout */
+.btn-bottom:hover {
+    color: #fff; /* Texto branco */
+    border-color: transparent; /* Mantém a borda transparente no hover */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+    cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
+    /* Não há mais deslocamento, apenas aumento de tamanho */
+}
+
+.btn-bottom .arrow {
+    margin-left: 10px;
+    opacity: 1; /* Deixa a seta visível */
+    transform: translateX(0); /* Remove a animação de movimento */
+}
+</style>
+
 
     <script>
 // Inicializa a lista de estrelas
