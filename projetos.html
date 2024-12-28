@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about me</title>
+    <title>My Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1249433619500630026/1321388072176324638/34391e40a5e88b82047953c5efe260b9.png?ex=676d0e0a&is=676bbc8a&hm=8badf380080fe7c0460399cf562d51d420159502f1dd335da139bb6b90dc1c7b&" type="image/png"> <!-- Favicon -->
     <style>
@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado para a página */
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
             position: relative;
             overflow: hidden; /* Evita áreas não desejadas fora da tela */
             flex-direction: column; /* Organiza o conteúdo verticalmente */
@@ -44,30 +44,6 @@
             letter-spacing: -0.02em;
         }
 
-        .header p {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-top: 10px;
-        }
-
-        .about-me {
-            color: #ccc;
-            text-align: left;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-top: 30px;
-        }
-
-        .about-me h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .about-me p {
-            margin-bottom: 20px;
-        }
-
         .button-container {
             display: flex;
             justify-content: center;
@@ -78,19 +54,21 @@
             z-index: 3;
         }
 
-        /* Botão semelhante ao do index.html */
         .btn-bottom {
             color: #fff;
-            font-size: 1.3rem; /* Diminuído um pouco o tamanho do botão */
+            font-size: 1.3rem; /* Tamanho do botão */
             font-weight: bold;
             text-decoration: none;
             border: 2px solid transparent;
-            padding: 12px 25px; /* Diminuído o padding */
+            padding: 12px 25px; /* Padding do botão */
             border-radius: 10px;
             background-color: transparent; /* Fundo transparente */
             transition: all 0.3s ease;
             overflow: hidden;
             cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
+            position: relative;
+            display: flex; /* Para alinhar a imagem e o texto */
+            align-items: center; /* Centraliza verticalmente */
         }
 
         .btn-bottom::before {
@@ -122,31 +100,7 @@
             cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
         }
 
-        .btn-bottom .arrow {
-            margin-left: 10px;
-            opacity: 1; /* Deixa a seta visível */
-            transform: translateX(0); /* Remove a animação de movimento */
-        }
-
-        /* Alinha os botões lado a lado */
-        .button-container a {
-            position: relative;
-        }
-
-        /* Invertendo a direção das setas */
-        .btn-left .arrow {
-            transform: rotate(180deg); /* Gira a seta da esquerda */
-        }
-
-        .btn-right .arrow {
-            transform: rotate(0deg); /* Mantém a seta da direita normal */
-        }
-
         @media (max-width: 600px) {
-            .about-me {
-                font-size: 1rem;
-            }
-
             .header h1 {
                 font-size: 1.5rem;
             }
@@ -155,15 +109,75 @@
                 padding: 10px 20px; /* Botões um pouco menores em telas pequenas */
                 font-size: 1.2rem;
             }
-
-            .btn-bottom .arrow {
-                font-size: 1.2rem; /* Ajusta o tamanho da seta em telas menores */
-            }
         }
-.foto-perfil {
-  width: 200px; /* Tamanho da imagem */
-  height: 200px;
-  margin-bottom: 20px; /* Espaço abaixo da imagem */
+        .card {
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 2; /* Coloca os cards acima do fundo */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0; /* Espaço acima e abaixo do card */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    cursor: url('imagens/outro-cursor.png'), auto; /* Cursor personalizado */
+    max-width: 400px; /* Limita a largura do card */
+    width: 100%; /* Faz o card ocupar toda a largura disponível até o máximo */
+}
+
+.card-content {
+    display: flex; /* Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.2); /* Muda a cor de fundo no hover */
+}
+
+.card-icon {
+    width: 120px; /* Tamanho maior para o ícone */
+    height: 120px; /* Tamanho maior para o ícone */
+    margin-right: 20px; /* Espaço à direita da imagem */
+}
+
+.text-content {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #fff; /* Cor do título */
+    margin: 0; /* Remove margens padrão */
+}
+
+.card-description {
+    color: #aaa; /* Cor da descrição */
+    margin: 10px 0; /* Espaço acima e abaixo da descrição */
+}
+
+.card-button {
+    display: inline-block; /* Para que o botão tenha padding */
+    color: #fff; /* Cor do texto do botão */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #fff; /* Borda branca */
+    padding: 10px 20px; /* Padding do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.card-button:hover {
+    background-color: #fff; /* Fundo branco no hover */
+    color: #000; /* Texto preto no hover */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+.card-container {
+    display: flex; /* Usar flexbox para alinhar os cards lado a lado */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 20px; /* Espaço acima do contêiner */
 }
 
 .star-container {
@@ -192,38 +206,43 @@
         transform: translateY(100vh);
     }
 }
+
     </style>
 </head>
 <body>
     <div class="star-container"></div>
     <div class="content">
         <header class="header">
-            <img src="imagens/hatsune.gif" alt="Foto de perfil" class="foto-perfil">
-            <h1>/about me</h1>
-            <p>Victor, 16y — Brazil, Espírito Santo.</p>
+            <h1>My Projects</h1>
         </header>
-
-        <div class="about-me">
-            <h2>Who am I?</h2>
-            <p>Just a programmer trying to make some projects.</p>
-
-            <h2>What do I do?</h2>
-            <p>Currently, I develop intelligent machines (AI) and work on projects.</p>
-
-            <h2>Myself</h2>
-            <p>I am a 16-year-old junior programmer with a strong interest in back-end development. I am also familiar with front-end technologies and enjoy working on both sides of development. My skills include languages such as Python, JavaScript (with Node.js for back-end development), PHP, SQL, HTML, CSS, and I am comfortable using frameworks like React.</p> 
-            <span style="display: block;">𝘐’𝘷𝘦 𝘣𝘦𝘦𝘯 𝘵𝘳𝘺𝘪𝘯𝘨 𝘵𝘰 𝘭𝘦𝘢𝘳𝘯 𝘑𝘢𝘷𝘢 𝘧𝘰𝘳 𝘭𝘪𝘬𝘦 𝘢 𝘺𝘦𝘢𝘳 𝘯𝘰𝘸, 𝘭𝘰𝘭. 𝘚𝘵𝘪𝘭𝘭 𝘢 𝘸𝘰𝘳𝘬 𝘪𝘯 𝘱𝘳𝘰𝘨𝘳𝘦𝘴𝘴! -_-
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <img src="imagens/hexcel.png" alt="Ícone" class="card-icon">
+                    <div class="text-content">
+                        <h2 class="card-title">Project not found</h2>
+                        <p class="card-description">Unable to find the file for this specific project.</p>
+                        <a href="" class="card-button">Click me!</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-content">
+                    <img src="imagens/infproducts.png" alt="Ícone" class="card-icon">
+                    <div class="text-content">
+                        <h2 class="card-title">Project not found</h2>
+                        <p class="card-description">Unable to find the file for this specific project.</p>
+                        <a href="" class="card-button">Click me!</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="button-container">
-        <!-- Botão de Voltar -->
-        <a href="index.html" class="btn-bottom btn-left">
-            ←  Back
-        </a>
-        <!-- Botão de Próxima Página -->
-        <a href="projetos.html" class="btn-bottom btn-right">
-            Next  →
+        <a href="index.html" class="btn-bottom">
+            <img src="imagens/white-house-icon-png.webp" alt="Casa" style="width: 20px; height: 20px; margin-right: 8px;"> Home
         </a>
     </div>
 
@@ -233,7 +252,7 @@
         const starContainer = document.querySelector('.star-container'); // Seleciona o contêiner de estrelas
         
         // Defina um limite máximo de estrelas
-        const maxStars = 15; // Número máximo de estrelas na tela
+        const maxStars = 20; // Número máximo de estrelas na tela
         
         // Função para criar estrelas
         function createStar() {
@@ -282,6 +301,5 @@
                 // Reinicia a animação a cada 15 segundos
                 setInterval(restartAnimation, 15000);
             </script>
-
 </body>
 </html>
