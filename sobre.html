@@ -27,11 +27,31 @@
             position: relative;
             z-index: 2; /* Garante que o conteúdo fique acima de qualquer outro elemento */
             width: 100%;
-            max-width: 900px; /* Limita a largura do conteúdo */
+            max-width: 700px; /* Limita a largura do conteúdo */
             padding: 20px;
             box-sizing: border-box;
-            margin-bottom: 50px; /* Espaço para os botões não ficarem colados no final */
+            margin-bottom: 30px; /* Espaço para os botões não ficarem colados no final */
+            border-radius: 20px; /* Bordas arredondadas */
+            padding: 40px; /* Espaçamento interno */
+            background: rgba(255, 255, 255, 0.1); /* Fundo branco com 10% de opacidade */
+    backdrop-filter: blur(10px); /* Desfoque de 10px */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 20px; /* Bordas arredondadas */
+    animation: glow 3s infinite; /* Aplica a animação de brilho */
         }
+
+        @keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+}
 
         .header {
             margin-bottom: 20px;
@@ -53,7 +73,7 @@
             color: #ccc;
             text-align: left;
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.2;
             margin-top: 30px;
         }
 
@@ -102,11 +122,11 @@
             height: 100%;
             border-radius: 10px;
             border: 2px solid transparent;
-            background: linear-gradient(90deg, #333, #111, #333); /* Gradiente preto */
-            background-size: 200%;
             z-index: -1;
             transition: all 0.4s;
-            animation: gradient-border 3s infinite;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
         }
 
         @keyframes gradient-border {
@@ -161,9 +181,9 @@
             }
         }
 .foto-perfil {
-  width: 200px; /* Tamanho da imagem */
-  height: 200px;
-  margin-bottom: 20px; /* Espaço abaixo da imagem */
+  width: 100px; /* Tamanho da imagem */
+  height: 100px;
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
 }
 
 .star-container {
@@ -192,14 +212,24 @@
         transform: translateY(100vh);
     }
 }
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
     </style>
 </head>
 <body>
     <div class="star-container"></div>
     <div class="content">
         <header class="header">
-            <img src="imagens/hatsune.gif" alt="Foto de perfil" class="foto-perfil">
-            <h1>/about me</h1>
+            <h1>> About Me <</h1>
             <p>Victor, 16y — Brazil, Espírito Santo.</p>
         </header>
 
