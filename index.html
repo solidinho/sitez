@@ -170,10 +170,14 @@
             }
         }
 
-        
     </style>
 </head>
 <body>
+    <audio id="background-music" loop>
+        <source src="imagens/sua-musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
     <div class="star-container"></div>
     <div class="content">
         <header>
@@ -204,16 +208,7 @@
             <a href=" https://steamcommunity.com/id/sol1dy/" class="btn">/steam</a>
         </div>
 
-        <div class="music-player" style="margin-top: 30px;">
-            <iframe src="https://open.spotify.com/embed/track/13WHJ25xY3CekEyP5q8tNo?si=062ba1ff003d43fc" 
-                    width="400" 
-                    height="180" 
-                    frameborder="0" 
-                    allowtransparency="true" 
-                    allow="encrypted-media"
-                    style="filter: grayscale(100%);">
-            </iframe>
-        </div>
+
     </div>
 
 <!-- Botão inferior -->
@@ -278,6 +273,16 @@
 
 
     <script>
+
+const audio = document.getElementById('background-music');
+
+// Função para iniciar a reprodução quando a página carrega
+window.onload = () => {
+    audio.play().catch(error => {
+        console.warn("A reprodução automática foi bloqueada pelo navegador. O usuário precisa interagir.");
+    });
+};
+
 // Inicializa a lista de estrelas
 const stars = []; 
 const starContainer = document.querySelector('.star-container'); // Seleciona o contêiner de estrelas
