@@ -20,7 +20,6 @@
             height: 100vh;
             cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
             position: relative;
-            overflow: hidden; /* Evita áreas não desejadas fora da tela */
             flex-direction: column; /* Organiza o conteúdo verticalmente */
         }
 
@@ -47,6 +46,7 @@
         .button-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 30px; /* Aumenta o espaçamento entre os botões */
             position: absolute;
             bottom: 20px; /* Posiciona os botões na parte inferior */
