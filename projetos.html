@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="imagens/caralho.png" type="image/png">    
         <style>
@@ -207,14 +207,80 @@
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar a animação a todos os elementos que você deseja animar */
+.animated {
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInUp 3s ease forwards;
+}
+
+.sobre-mim-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #000000, #ffffff, #000000);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+    text-align: center; /* Centralizar o texto */
+    margin: 20px 0; /* Adicionar margem para melhor espaçamento */
+    position: relative;
+    display: inline-block; 
+}
+@keyframes moveLine {
+    0% {
+        transform: translateX(-30%); /* Começa totalmente à esquerda */
+    }
+    50% {
+        transform: translateX(30%); /* Vai totalmente à direita */
+    }
+    100% {
+        transform: translateX(-30%); /* Volta à esquerda */
+    }
+}
+.sobre-mim-titulo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Posiciona a linha abaixo do título */
+    width: 100%; /* Largura da linha (igual ao tamanho do texto) */
+    height: 2px; /* Espessura da linha */
+    background: linear-gradient(90deg, #000000, #ffffff, #000000); /* Mesmo gradiente do título */
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; /* Animações combinadas */
+    transform-origin: left; /* Define o ponto de origem da animação */
+    overflow: hidden;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
     </style>
 </head>
 <body>
     <div class="star-container"></div>
     <div class="content">
-        <header class="header">
-            <h1>My Projects</h1>
-        </header>
+        <header class="animated">
+            <h1 class="sobre-mim-titulo">My Projects</h1>
+        
         <div class="card-container">
             <div class="card">
                 <div class="card-content">
@@ -239,7 +305,7 @@
             </div>
         </div>
     </div>
-
+</header>
     <div class="button-container">
         <a href="index.html" class="btn-bottom">
             <img src="imagens/white-house-icon-png.webp" alt="Casa" style="width: 20px; height: 20px; margin-right: 8px;"> Home

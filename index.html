@@ -8,18 +8,18 @@
     <link rel="icon" href="imagens/caralho.png" type="image/png">    
     <style>
         body {
-            font-family: 'Poppins', sans-serif; /* Usando Monaco e fontes alternativas */
+            font-family: 'Poppins', sans-serif; 
             margin: 0;
             padding: 0;
-            background: #000; /* Fundo preto */
-            color: #aaa; /* Texto cinza claro */
+            background: #000; 
+            color: #aaa; 
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor padrão */
-            position: relative; /* Para o posicionamento das estrelas */
+            cursor: url('imagens/meu-cursor.png'), auto; 
+            position: relative; 
         }
 
         .star-container {
@@ -29,7 +29,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            pointer-events: none; /* Para que as estrelas não interfiram com outros elementos */
+            pointer-events: none; 
         }
 
         .star {
@@ -51,10 +51,10 @@
 
         .line {
             position: absolute;
-            width: 1px; /* Largura da linha */
-            background: rgba(255, 255, 255, 0.5); /* Cor da linha */
-            pointer-events: none; /* Para que as linhas não interfiram com outros elementos */
-            transition: opacity 0.3s; /* Efeito de transição */
+            width: 1px; 
+            background: rgba(255, 255, 255, 0.5); 
+            pointer-events: none; 
+            transition: opacity 0.3s; 
         }
 
         .content {
@@ -62,10 +62,9 @@
         }
 
         header {
-            margin-bottom: 10px; /* Ajustado para centralizar melhor */
+            margin-bottom: 10px; 
         }
 
-        /* Animação para as letras do título */
         .letter {
             display: inline-block;
             opacity: 0;
@@ -81,23 +80,23 @@
         }
 
         header h1 {
-            font-size: 1.5rem; /* Diminuído o tamanho do título */
+            font-size: 1.5rem;
             margin: 0;
             color: #fff;
             letter-spacing: -0.02em;
         }
 
         header p {
-            font-size: 1rem; /* Diminuído o tamanho da descrição */
-            margin: 5px 0 0; /* Ajustado o espaçamento */
-            color: #888; /* Texto cinza escuro */
-            animation: fadeIn 1s ease forwards; /* Animação da descrição */
-            animation-delay: 0.5s; /* Atraso na animação da descrição */
+            font-size: 1rem; 
+            margin: 5px 0 0; 
+            color: #888; 
+            animation: fadeIn 1s ease forwards; 
+            animation-delay: 0.5s; 
         }
 
         header img {
-            width: 150px; /* Diminuído o tamanho da imagem */
-            height: 150px; /* Diminuído o tamanho da imagem */
+            width: 150px; 
+            height: 150px; 
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
         }
@@ -106,23 +105,23 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px; /* Ajustado o espaçamento entre os botões */
+            gap: 15px; 
         }
 
         .btn {
-            background: #111; /* Fundo do botão */
-            color: #ccc; /* Texto do botão */
-            padding: 10px 20px; /* Diminuído o padding */
-            font-size: 1rem; /* Diminuído o tamanho da fonte */
+            background: #111; 
+            color: #ccc; 
+            padding: 10px 20px; 
+            font-size: 1rem; 
             font-weight: bold;
             border: none;
             border-radius: 8px;
-            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor padrão */
+            cursor: url('imagens/meu-cursor.png'), auto; 
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
             position: relative;
             overflow: hidden;
-            text-decoration: none; /* Remove o sublinhado dos links */
+            text-decoration: none; 
         }
 
         .btn::before {
@@ -141,34 +140,44 @@
         }
 
         .btn:hover {
-            background: #222; /* Fundo do botão ao passar o mouse */
-            color: #fff; /* Texto do botão ao passar o mouse */
+            background: #222; 
+            color: #fff; 
             transform: scale(1.05);
-            cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
+            cursor: url('imagens/outro-cursor.png'), auto; 
         }
 
         .gif-container {
             position: absolute;
             top: 10px;
             right: 10px;
-            width: 400px; /* Diminuído o tamanho do GIF */
-            height: 400px; /* Diminuído o tamanho do GIF */
+            width: 400px; 
+            height: 400px; 
         }
 
         .gif-container img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Mantém a proporção da imagem */
+            object-fit: contain; 
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
         }
 
-        @media (max-width: 600px) {
-            .music-player iframe {
-                width: 100%; /* Ajusta a largura para 100% em telas menores */
-                height: 80px; /* Ajusta a altura para 80px */
-            }
-        }
+        @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar a animação a todos os elementos que você deseja animar */
+.animated {
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInUp 3s ease forwards;
+}
 
     </style>
 </head>
@@ -180,7 +189,7 @@
 
     <div class="star-container"></div>
     <div class="content">
-        <header>
+        <header class="animated">
             <img src="imagens/lelouch.gif" alt ="Header Image">
             <h1>
                 <span class="letter" style="animation-delay: 0s;">H</span>
@@ -199,7 +208,7 @@
                 <span class="letter" style="animation-delay: 1.3s;">!</span>
             </h1>
             <p>I'm Solidy, just a dev doing some nonsense.</p>
-        </header>
+        
 
         <div class="button-container">
             <a href="https://discord.com/users/1005328428750344293" class="btn">/discord</a>
@@ -207,19 +216,18 @@
             <a href="https://github.com/solidyy" class="btn">/github</a>
             <a href=" https://steamcommunity.com/id/sol1dy/" class="btn">/steam</a>
         </div>
-
+</header>
 
     </div>
 
-<!-- Botão inferior -->
 <a href="sobre.html" class="btn-bottom">Next Page <span class="arrow">→</span></a>
 
 <style>
-/* Botão inferior */
+
 .btn-bottom {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px; /* Distância da parte inferior */
-    left: 20; /* Centraliza o botão horizontalmente */
+    position: fixed; 
+    bottom: 20px; 
+    left: 20; 
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
@@ -227,10 +235,10 @@
     border: 2px solid transparent;
     padding: 15px 30px;
     border-radius: 10px;
-    background-color: transparent; /* Fundo transparente */
+    background-color: transparent; 
     transition: all 0.3s ease;
     overflow: hidden;
-    cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
+    cursor: url('imagens/meu-cursor.png'), auto; 
 }
 
 .btn-bottom::before {
@@ -255,19 +263,18 @@
     100% { background-position: 0% 50%; }
 }
 
-/* Alterado o hover para não mexer no layout */
+
 .btn-bottom:hover {
-    color: #fff; /* Texto branco */
-    border-color: transparent; /* Mantém a borda transparente no hover */
-    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
-    cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
-    /* Não há mais deslocamento, apenas aumento de tamanho */
+    color: #fff; 
+    border-color: transparent; 
+    transform: scale(1.1); /
+    cursor: url('imagens/outro-cursor.png'), auto;
 }
 
 .btn-bottom .arrow {
     margin-left: 10px;
-    opacity: 1; /* Deixa a seta visível */
-    transform: translateX(0); /* Remove a animação de movimento */
+    opacity: 1; 
+    transform: translateX(0); 
 }
 </style>
 
@@ -276,65 +283,64 @@
 
 const audio = document.getElementById('background-music');
 
-// Função para iniciar a reprodução quando a página carrega
+
 window.onload = () => {
     audio.play().catch(error => {
         console.warn("A reprodução automática foi bloqueada pelo navegador. O usuário precisa interagir.");
     });
 };
 
-// Inicializa a lista de estrelas
+
 const stars = []; 
-const starContainer = document.querySelector('.star-container'); // Seleciona o contêiner de estrelas
+const starContainer = document.querySelector('.star-container'); 
 
-// Defina um limite máximo de estrelas
-const maxStars = 30; // Número máximo de estrelas na tela
 
-// Função para criar estrelas
+const maxStars = 30; 
+
+
 function createStar() {
-    // Verifica se o número atual de estrelas é menor que o máximo permitido
+   
     if (stars.length < maxStars) {
         const star = document.createElement('div');
         star.classList.add('star');
 
-        // Define a posição inicial da estrela
-        const x = Math.random() * 100; // Posição horizontal aleatória
-        const y = Math.random() * 100; // Posição vertical aleatória
+        
+        const x = Math.random() * 100; 
+        const y = Math.random() * 100; 
         star.style.left = x + 'vw';
         star.style.top = y + 'vh';
-        star.style.width = Math.random() * 3 + 2 + 'px'; // Tamanho aleatório
-        star.style.height = star.style.width; // Mantém a proporção
+        star.style.width = Math.random() * 3 + 2 + 'px'; 
+        star.style.height = star.style.width; 
 
-        // Define a duração da animação
-        const fallDuration = Math.random() * 3 + 2; // Duração entre 2s e 5s
+        
+        const fallDuration = Math.random() * 3 + 2; 
         star.style.animationDuration = fallDuration + 's';
 
-        // Adiciona a estrela ao contêiner
+       
         starContainer.appendChild(star);
         stars.push(star);
 
-        // Remove a estrela após a animação
+        
         star.addEventListener('animationend', () => {
             star.remove();
-            stars.splice(stars.indexOf(star), 1); // Remove a estrela do array
+            stars.splice(stars.indexOf(star), 1); 
         });
     }
 }
 
-// Cria estrelas em intervalos regulares
-setInterval(createStar, 500); // Cria uma nova estrela a cada 500ms
-        // Função para reiniciar a animação
+
+setInterval(createStar, 500); 
         function restartAnimation() {
             const letters = document.querySelectorAll('.letter');
             letters.forEach((letter, index) => {
-                letter.style.animation = 'none'; // Remove a animação
-                letter.offsetHeight; // Força a reflow
-                letter.style.animation = `appear 0.5s forwards`; // Reaplica a animação
-                letter.style.animationDelay = `${index * 0.1}s`; // Define o atraso para cada letra
+                letter.style.animation = 'none'; 
+                letter.offsetHeight; 
+                letter.style.animation = `appear 0.5s forwards`; 
+                letter.style.animationDelay = `${index * 0.1}s`; 
             });
         }
 
-        // Reinicia a animação a cada 15 segundos
+        
         setInterval(restartAnimation, 15000);
     </script>
 </body>

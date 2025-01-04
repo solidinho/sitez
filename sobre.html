@@ -223,15 +223,67 @@
         background-position: 0% 50%;
     }
 }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar a animação a todos os elementos que você deseja animar */
+.animated {
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInUp 3s ease forwards;
+}
+.sobre-mim-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #000000, #ffffff, #000000);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+    text-align: center; /* Centralizar o texto */
+    margin: 20px 0; /* Adicionar margem para melhor espaçamento */
+    position: relative;
+    display: inline-block; 
+}
+@keyframes moveLine {
+    0% {
+        transform: translateX(-30%); /* Começa totalmente à esquerda */
+    }
+    50% {
+        transform: translateX(30%); /* Vai totalmente à direita */
+    }
+    100% {
+        transform: translateX(-30%); /* Volta à esquerda */
+    }
+}
+.sobre-mim-titulo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Posiciona a linha abaixo do título */
+    width: 100%; /* Largura da linha (igual ao tamanho do texto) */
+    height: 2px; /* Espessura da linha */
+    background: linear-gradient(90deg, #000000, #ffffff, #000000); /* Mesmo gradiente do título */
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; /* Animações combinadas */
+    transform-origin: left; /* Define o ponto de origem da animação */
+    overflow: hidden;
+}
     </style>
 </head>
 <body>
     <div class="star-container"></div>
     <div class="content">
-        <header class="header">
-            <h1>> About Me <</h1>
+        <header class="animated">
+            <h1 class="sobre-mim-titulo">About Me</h1>
             <p>Victor, 16y — Brazil, Espírito Santo.</p>
-        </header>
 
         <div class="about-me">
             <h2>Who am I?</h2>
@@ -245,7 +297,7 @@
             <span style="display: block;">𝘐’𝘷𝘦 𝘣𝘦𝘦𝘯 𝘵𝘳𝘺𝘪𝘯𝘨 𝘵𝘰 𝘭𝘦𝘢𝘳𝘯 𝘑𝘢𝘷𝘢 𝘧𝘰𝘳 𝘭𝘪𝘬𝘦 𝘢 𝘺𝘦𝘢𝘳 𝘯𝘰𝘸, 𝘭𝘰𝘭. 𝘚𝘵𝘪𝘭𝘭 𝘢 𝘸𝘰𝘳𝘬 𝘪𝘯 𝘱𝘳𝘰𝘨𝘳𝘦𝘴𝘴! -_-
         </div>
     </div>
-
+</header>
     <div class="button-container">
         <!-- Botão de Voltar -->
         <a href="index.html" class="btn-bottom btn-left">
