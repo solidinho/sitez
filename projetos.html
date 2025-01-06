@@ -11,26 +11,26 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000; 
-            color: #aaa; 
+            background: #000; /* Fundo preto */
+            color: #aaa; /* Texto cinza claro */
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            cursor: url('imagens/meu-cursor.png'), auto; 
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
             position: relative;
-            flex-direction: column; 
+            flex-direction: column; /* Organiza o conteúdo verticalmente */
         }
 
         .content {
             position: relative;
-            z-index: 2; 
+            z-index: 2; /* Garante que o conteúdo fique acima de qualquer outro elemento */
             width: 100%;
-            max-width: 900px; 
+            max-width: 900px; /* Limita a largura do conteúdo */
             padding: 20px;
             box-sizing: border-box;
-            margin-bottom: 50px; 
+            margin-bottom: 50px; /* Espaço para os botões não ficarem colados no final */
         }
 
         .header {
@@ -47,28 +47,28 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px; 
+            gap: 30px; /* Aumenta o espaçamento entre os botões */
             position: absolute;
-            bottom: 20px; 
+            bottom: 20px; /* Posiciona os botões na parte inferior */
             width: 100%;
             z-index: 3;
         }
 
         .btn-bottom {
             color: #fff;
-            font-size: 1.3rem; 
+            font-size: 1.3rem; /* Tamanho do botão */
             font-weight: bold;
             text-decoration: none;
             border: 2px solid transparent;
-            padding: 12px 25px; 
+            padding: 12px 25px; /* Padding do botão */
             border-radius: 10px;
-            background-color: transparent; 
+            background-color: transparent; /* Fundo transparente */
             transition: all 0.3s ease;
             overflow: hidden;
-            cursor: url('imagens/meu-cursor.png'), auto; 
+            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
             position: relative;
-            display: flex;
-            align-items: center; 
+            display: flex; /* Para alinhar a imagem e o texto */
+            align-items: center; /* Centraliza verticalmente */
         }
 
         .btn-bottom::before {
@@ -80,7 +80,7 @@
             height: 100%;
             border-radius: 10px;
             border: 2px solid transparent;
-            background: linear-gradient(90deg, #333, #111, #333); 
+            background: linear-gradient(90deg, #333, #111, #333); /* Gradiente preto */
             background-size: 200%;
             z-index: -1;
             transition: all 0.4s;
@@ -94,10 +94,10 @@
         }
 
         .btn-bottom:hover {
-            color: #fff; 
-            border-color: transparent; 
-            transform: scale(1.1); 
-            cursor: url('imagens/outro-cursor.png'), auto; 
+            color: #fff; /* Texto branco */
+            border-color: transparent; /* Mantém a borda transparente no hover */
+            transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+            cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
         }
 
         @media (max-width: 600px) {
@@ -106,76 +106,78 @@
             }
 
             .btn-bottom {
-                padding: 10px 20px; 
+                padding: 10px 20px; /* Botões um pouco menores em telas pequenas */
                 font-size: 1.2rem;
             }
         }
         .card {
-    position: relative; 
-    z-index: 2; 
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 2px solid rgba(255, 255, 255, 0.3); 
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 2; /* Coloca os cards acima do fundo */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
     border-radius: 10px;
     padding: 15px;
-    margin: 20px 0; 
-    transition: transform 0.3s ease, background-color 0.3s ease; 
-    text-align: left; 
-    cursor: url('imagens/outro-cursor.png'), auto; 
-    max-width: 400px; 
-    width: 100%; 
+    margin: 20px 0; /* Espaço acima e abaixo do card */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    cursor: url('imagens/outro-cursor.png'), auto; /* Cursor personalizado */
+    max-width: 400px; /* Limita a largura do card */
+    width: 100%; /* Faz o card ocupar toda a largura disponível até o máximo */
 }
 
 .card-content {
-    display: flex; 
-    align-items: center; 
+    display: flex; /* Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .card:hover {
-    transform: scale(1.05); 
-    background-color: rgba(255, 255, 255, 0.2); 
+    transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.2); /* Muda a cor de fundo no hover */
 }
 
 .card-icon {
-    width: 120px; 
-    height: 120px; 
-    margin-right: 20px; 
+    width: 120px; /* Tamanho maior para o ícone */
+    height: 120px; /* Tamanho maior para o ícone */
+    margin-right: 20px; /* Espaço à direita da imagem */
 }
 
 .text-content {
-    flex: 1; 
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+}
 
 .card-title {
-    font-size: 1.5rem; 
-    color: #fff; 
-    margin: 0; 
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #fff; /* Cor do título */
+    margin: 0; /* Remove margens padrão */
+}
 
 .card-description {
-    color: #aaa; 
-    margin: 10px 0; 
+    color: #aaa; /* Cor da descrição */
+    margin: 10px 0; /* Espaço acima e abaixo da descrição */
 }
 
 .card-button {
-    display: inline-block;
-    color: #fff; 
-    background-color: transparent; 
-    border: 2px solid #fff;
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; /* Para que o botão tenha padding */
+    color: #fff; /* Cor do texto do botão */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #fff; /* Borda branca */
+    padding: 10px 20px; /* Padding do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transições suaves */
 }
 
 .card-button:hover {
-    background-color: #fff; 
-    color: #000; 
-    transform: scale(1.1); 
+    background-color: #fff; /* Fundo branco no hover */
+    color: #000; /* Texto preto no hover */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
 }
 
 .card-container {
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    margin-top: 20px; 
+    display: flex; /* Usar flexbox para alinhar os cards lado a lado */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 20px; /* Espaço acima do contêiner */
 }
 
 .star-container {
@@ -185,7 +187,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    pointer-events: none; 
+    pointer-events: none; /* Para que as estrelas não interfiram com outros elementos */
 }
 
 .star {
@@ -216,8 +218,9 @@
     }
 }
 
+/* Aplicar a animação a todos os elementos que você deseja animar */
 .animated {
-    opacity: 0; 
+    opacity: 0; /* Inicialmente invisível */
     animation: fadeInUp 3s ease forwards;
 }
 
@@ -229,33 +232,33 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientAnimation 5s ease infinite;
-    text-align: center; 
-    margin: 20px 0; 
+    text-align: center; /* Centralizar o texto */
+    margin: 20px 0; /* Adicionar margem para melhor espaçamento */
     position: relative;
     display: inline-block; 
 }
 @keyframes moveLine {
     0% {
-        transform: translateX(-30%); 
+        transform: translateX(-30%); /* Começa totalmente à esquerda */
     }
     50% {
-        transform: translateX(30%); 
+        transform: translateX(30%); /* Vai totalmente à direita */
     }
     100% {
-        transform: translateX(-30%); 
+        transform: translateX(-30%); /* Volta à esquerda */
     }
 }
 .sobre-mim-titulo::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; 
-    width: 100%; 
-    height: 2px; 
-    background: linear-gradient(90deg, #000000, #ffffff, #000000); 
+    bottom: -5px; /* Posiciona a linha abaixo do título */
+    width: 100%; /* Largura da linha (igual ao tamanho do texto) */
+    height: 2px; /* Espessura da linha */
+    background: linear-gradient(90deg, #000000, #ffffff, #000000); /* Mesmo gradiente do título */
     background-size: 200% 200%;
-    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; 
-    transform-origin: left; 
+    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; /* Animações combinadas */
+    transform-origin: left; /* Define o ponto de origem da animação */
     overflow: hidden;
 }
 @keyframes gradientAnimation {
@@ -310,49 +313,58 @@
     </div>
 
     <script>
+        // Inicializa a lista de estrelas
         const stars = []; 
         const starContainer = document.querySelector('.star-container'); // Seleciona o contêiner de estrelas
         
-        const maxStars = 20; 
+        // Defina um limite máximo de estrelas
+        const maxStars = 20; // Número máximo de estrelas na tela
         
+        // Função para criar estrelas
         function createStar() {
+            // Verifica se o número atual de estrelas é menor que o máximo permitido
             if (stars.length < maxStars) {
                 const star = document.createElement('div');
                 star.classList.add('star');
         
-                const x = Math.random() * 100; 
-                const y = Math.random() * 100; 
+                // Define a posição inicial da estrela
+                const x = Math.random() * 100; // Posição horizontal aleatória
+                const y = Math.random() * 100; // Posição vertical aleatória
                 star.style.left = x + 'vw';
                 star.style.top = y + 'vh';
-                star.style.width = Math.random() * 3 + 2 + 'px'; 
-                star.style.height = star.style.width; 
+                star.style.width = Math.random() * 3 + 2 + 'px'; // Tamanho aleatório
+                star.style.height = star.style.width; // Mantém a proporção
         
-                const fallDuration = Math.random() * 3 + 2; 
+                // Define a duração da animação
+                const fallDuration = Math.random() * 3 + 2; // Duração entre 2s e 5s
                 star.style.animationDuration = fallDuration + 's';
         
-                
+                // Adiciona a estrela ao contêiner
                 starContainer.appendChild(star);
                 stars.push(star);
         
-                
+                // Remove a estrela após a animação
                 star.addEventListener('animationend', () => {
                     star.remove();
-                    stars.splice(stars.indexOf(star), 1); 
+                    stars.splice(stars.indexOf(star), 1); // Remove a estrela do array
                 });
             }
         }
         
-        setInterval(createStar, 500); 
+        // Cria estrelas em intervalos regulares
+        setInterval(createStar, 500); // Cria uma nova estrela a cada 500ms
+                // Função para reiniciar a animação
                 function restartAnimation() {
                     const letters = document.querySelectorAll('.letter');
                     letters.forEach((letter, index) => {
-                        letter.style.animation = 'none'; 
-                        letter.offsetHeight; 
-                        letter.style.animation = `appear 0.5s forwards`; 
-                        letter.style.animationDelay = `${index * 0.1}s`; 
+                        letter.style.animation = 'none'; // Remove a animação
+                        letter.offsetHeight; // Força a reflow
+                        letter.style.animation = `appear 0.5s forwards`; // Reaplica a animação
+                        letter.style.animationDelay = `${index * 0.1}s`; // Define o atraso para cada letra
                     });
                 }
         
+                // Reinicia a animação a cada 15 segundos
                 setInterval(restartAnimation, 15000);
             </script>
 </body>
