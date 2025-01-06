@@ -11,34 +11,34 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000; /* Fundo preto */
-            color: #aaa; /* Texto cinza claro */
+            background: #000; 
+            color: #aaa; 
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado para a página */
-            position: relative; /* Evita áreas não desejadas fora da tela */
-            flex-direction: column; /* Organiza o conteúdo verticalmente */
+            cursor: url('imagens/meu-cursor.png'), auto; 
+            position: relative; 
+            flex-direction: column; 
         }
 
         .content {
             position: relative;
-            z-index: 2; /* Garante que o conteúdo fique acima de qualquer outro elemento */
+            z-index: 2; 
             width: 100%;
-            max-width: 700px; /* Limita a largura do conteúdo */
+            max-width: 700px; 
             padding: 20px;
             box-sizing: border-box;
-            margin-bottom: 30px; /* Espaço para os botões não ficarem colados no final */
-            border-radius: 20px; /* Bordas arredondadas */
-            padding: 40px; /* Espaçamento interno */
-            background: rgba(255, 255, 255, 0.1); /* Fundo branco com 10% de opacidade */
-    backdrop-filter: blur(10px); /* Desfoque de 10px */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 20px; /* Bordas arredondadas */
-    animation: glow 3s infinite; /* Aplica a animação de brilho */
+            margin-bottom: 30px; 
+            border-radius: 20px; 
+            padding: 40px; 
+            background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px; 
+    animation: glow 3s infinite; 
         }
 
         @keyframes glow {
@@ -91,26 +91,26 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px; /* Aumenta o espaçamento entre os botões */
+            gap: 30px; 
             position: absolute;
-            bottom: 20px; /* Posiciona os botões na parte inferior */
+            bottom: 20px; 
             width: 100%;
             z-index: 3;
         }
 
-        /* Botão semelhante ao do index.html */
         .btn-bottom {
+            
             color: #fff;
-            font-size: 1.3rem; /* Diminuído um pouco o tamanho do botão */
+            font-size: 1.3rem; 
             font-weight: bold;
             text-decoration: none;
             border: 2px solid transparent;
-            padding: 12px 25px; /* Diminuído o padding */
+            padding: 12px 25px; 
             border-radius: 10px;
-            background-color: transparent; /* Fundo transparente */
+            background-color: transparent; 
             transition: all 0.3s ease;
             overflow: hidden;
-            cursor: url('imagens/meu-cursor.png'), auto; /* Cursor personalizado */
+            cursor: url('imagens/meu-cursor.png'), auto; 
         }
 
         .btn-bottom::before {
@@ -136,30 +136,28 @@
         }
 
         .btn-bottom:hover {
-            color: #fff; /* Texto branco */
-            border-color: transparent; /* Mantém a borda transparente no hover */
-            transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
-            cursor: url('imagens/outro-cursor.png'), auto; /* Cursor ao passar o mouse */
+            color: #fff; 
+            border-color: transparent; /
+            transform: scale(1.1);
+            cursor: url('imagens/outro-cursor.png'), auto; 
         }
 
         .btn-bottom .arrow {
             margin-left: 10px;
-            opacity: 1; /* Deixa a seta visível */
-            transform: translateX(0); /* Remove a animação de movimento */
+            opacity: 1; 
+            transform: translateX(0); 
         }
 
-        /* Alinha os botões lado a lado */
         .button-container a {
             position: relative;
         }
 
-        /* Invertendo a direção das setas */
         .btn-left .arrow {
-            transform: rotate(180deg); /* Gira a seta da esquerda */
+            transform: rotate(180deg);
         }
 
         .btn-right .arrow {
-            transform: rotate(0deg); /* Mantém a seta da direita normal */
+            transform: rotate(0deg); 
         }
 
         @media (max-width: 600px) {
@@ -172,18 +170,18 @@
             }
 
             .btn-bottom {
-                padding: 10px 20px; /* Botões um pouco menores em telas pequenas */
+                padding: 10px 20px; 
                 font-size: 1.2rem;
             }
 
             .btn-bottom .arrow {
-                font-size: 1.2rem; /* Ajusta o tamanho da seta em telas menores */
+                font-size: 1.2rem; 
             }
         }
 .foto-perfil {
-  width: 100px; /* Tamanho da imagem */
+  width: 100px; 
   height: 100px;
-  margin-bottom: 10px; /* Espaço abaixo da imagem */
+  margin-bottom: 10px; 
 }
 
 .star-container {
@@ -193,7 +191,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    pointer-events: none; /* Para que as estrelas não interfiram com outros elementos */
+    pointer-events: none; 
 }
 
 .star {
@@ -234,9 +232,9 @@
     }
 }
 
-/* Aplicar a animação a todos os elementos que você deseja animar */
+
 .animated {
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0; 
     animation: fadeInUp 3s ease forwards;
 }
 .sobre-mim-titulo {
@@ -247,33 +245,33 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientAnimation 5s ease infinite;
-    text-align: center; /* Centralizar o texto */
-    margin: 20px 0; /* Adicionar margem para melhor espaçamento */
+    text-align: center; 
+    margin: 20px 0; 
     position: relative;
     display: inline-block; 
 }
 @keyframes moveLine {
     0% {
-        transform: translateX(-30%); /* Começa totalmente à esquerda */
+        transform: translateX(-30%); 
     }
     50% {
-        transform: translateX(30%); /* Vai totalmente à direita */
+        transform: translateX(30%); 
     }
     100% {
-        transform: translateX(-30%); /* Volta à esquerda */
+        transform: translateX(-30%); 
     }
 }
 .sobre-mim-titulo::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Posiciona a linha abaixo do título */
-    width: 100%; /* Largura da linha (igual ao tamanho do texto) */
-    height: 2px; /* Espessura da linha */
-    background: linear-gradient(90deg, #000000, #ffffff, #000000); /* Mesmo gradiente do título */
+    bottom: -5px; 
+    width: 100%; 
+    height: 2px; 
+    background: linear-gradient(90deg, #000000, #ffffff, #000000); 
     background-size: 200% 200%;
-    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; /* Animações combinadas */
-    transform-origin: left; /* Define o ponto de origem da animação */
+    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; 
+    transform-origin: left; 
     overflow: hidden;
 }
     </style>
@@ -299,69 +297,56 @@
     </div>
 </header>
     <div class="button-container">
-        <!-- Botão de Voltar -->
         <a href="index.html" class="btn-bottom btn-left">
             ←  Back
         </a>
-        <!-- Botão de Próxima Página -->
         <a href="projetos.html" class="btn-bottom btn-right">
             Next  →
         </a>
     </div>
 
     <script>
-        // Inicializa a lista de estrelas
         const stars = []; 
-        const starContainer = document.querySelector('.star-container'); // Seleciona o contêiner de estrelas
+        const starContainer = document.querySelector('.star-container'); 
         
-        // Defina um limite máximo de estrelas
-        const maxStars = 15; // Número máximo de estrelas na tela
+        const maxStars = 15; 
         
-        // Função para criar estrelas
         function createStar() {
-            // Verifica se o número atual de estrelas é menor que o máximo permitido
             if (stars.length < maxStars) {
                 const star = document.createElement('div');
                 star.classList.add('star');
         
-                // Define a posição inicial da estrela
-                const x = Math.random() * 100; // Posição horizontal aleatória
-                const y = Math.random() * 100; // Posição vertical aleatória
+                const x = Math.random() * 100; 
+                const y = Math.random() * 100; 
                 star.style.left = x + 'vw';
                 star.style.top = y + 'vh';
-                star.style.width = Math.random() * 3 + 2 + 'px'; // Tamanho aleatório
-                star.style.height = star.style.width; // Mantém a proporção
+                star.style.width = Math.random() * 3 + 2 + 'px'; 
+                star.style.height = star.style.width; 
         
-                // Define a duração da animação
-                const fallDuration = Math.random() * 3 + 2; // Duração entre 2s e 5s
+                const fallDuration = Math.random() * 3 + 2; 
                 star.style.animationDuration = fallDuration + 's';
         
-                // Adiciona a estrela ao contêiner
                 starContainer.appendChild(star);
                 stars.push(star);
         
-                // Remove a estrela após a animação
                 star.addEventListener('animationend', () => {
                     star.remove();
-                    stars.splice(stars.indexOf(star), 1); // Remove a estrela do array
+                    stars.splice(stars.indexOf(star), 1); 
                 });
             }
         }
         
-        // Cria estrelas em intervalos regulares
-        setInterval(createStar, 500); // Cria uma nova estrela a cada 500ms
-                // Função para reiniciar a animação
+        setInterval(createStar, 500); 
                 function restartAnimation() {
                     const letters = document.querySelectorAll('.letter');
                     letters.forEach((letter, index) => {
-                        letter.style.animation = 'none'; // Remove a animação
-                        letter.offsetHeight; // Força a reflow
-                        letter.style.animation = `appear 0.5s forwards`; // Reaplica a animação
-                        letter.style.animationDelay = `${index * 0.1}s`; // Define o atraso para cada letra
+                        letter.style.animation = 'none'; 
+                        letter.offsetHeight; 
+                        letter.style.animation = `appear 0.5s forwards`; 
+                        letter.style.animationDelay = `${index * 0.1}s`; 
                     });
                 }
         
-                // Reinicia a animação a cada 15 segundos
                 setInterval(restartAnimation, 15000);
             </script>
 

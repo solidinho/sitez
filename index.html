@@ -22,22 +22,40 @@
             position: relative; 
         }
 
-        .star-container {
+       /* Efeito de partículas no fundo */
+       .particle-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            pointer-events: none; 
+            pointer-events: none; /* Permite interação com elementos abaixo */
+            z-index: -1; /* Fica atrás do conteúdo */
         }
 
-        .star {
+        /* Estilo das partículas */
+        .particle {
             position: absolute;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Cor branca com transparência */
             border-radius: 50%;
-            opacity: 0.8;
-            animation: fall linear infinite;
+            opacity: 0;
+            animation: float linear infinite;
+        }
+
+        /* Animação das partículas */
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50vw);
+                opacity: 0;
+            }
         }
 
         @keyframes fall {
@@ -173,15 +191,16 @@
     }
 }
 
-/* Aplicar a animação a todos os elementos que você deseja animar */
 .animated {
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0; 
     animation: fadeInUp 3s ease forwards;
 }
 
     </style>
 </head>
 <body>
+        <!-- Container para as partículas -->
+        <div class="particle-container"></div>
     <audio id="background-music" loop>
         <source src="imagens/sua-musica.mp3" type="audio/mpeg">
         Seu navegador não suporta a reprodução de áudio.
@@ -250,7 +269,7 @@
     height: 100%;
     border-radius: 10px;
     border: 2px solid transparent;
-    background: linear-gradient(90deg, #333, #111, #333); /* Gradiente preto */
+    background: linear-gradient(90deg, #333, #111, #333);
     background-size: 200%;
     z-index: -1;
     transition: all 0.4s;
@@ -278,70 +297,42 @@
 }
 </style>
 
-
     <script>
 
 const audio = document.getElementById('background-music');
 
+function createParticles() {
+            const particleContainer = document.querySelector('.particle-container');
+            const numParticles = 40; // Número de partículas
 
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                // Tamanho aleatório entre 2px e 7px
+                const size = Math.random() * 2 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // Posição horizontal aleatória
+                particle.style.left = `${Math.random() * 100}vw`;
+
+                // Duração e atraso da animação
+                particle.style.animationDuration = `${Math.random() * 7 + 7}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+
+                // Adiciona a partícula ao container
+                particleContainer.appendChild(particle);
+            }
+        }
 window.onload = () => {
+    createParticles();
     audio.play().catch(error => {
         console.warn("A reprodução automática foi bloqueada pelo navegador. O usuário precisa interagir.");
     });
 };
 
 
-const stars = []; 
-const starContainer = document.querySelector('.star-container'); 
-
-
-const maxStars = 30; 
-
-
-function createStar() {
-   
-    if (stars.length < maxStars) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-
-        
-        const x = Math.random() * 100; 
-        const y = Math.random() * 100; 
-        star.style.left = x + 'vw';
-        star.style.top = y + 'vh';
-        star.style.width = Math.random() * 3 + 2 + 'px'; 
-        star.style.height = star.style.width; 
-
-        
-        const fallDuration = Math.random() * 3 + 2; 
-        star.style.animationDuration = fallDuration + 's';
-
-       
-        starContainer.appendChild(star);
-        stars.push(star);
-
-        
-        star.addEventListener('animationend', () => {
-            star.remove();
-            stars.splice(stars.indexOf(star), 1); 
-        });
-    }
-}
-
-
-setInterval(createStar, 500); 
-        function restartAnimation() {
-            const letters = document.querySelectorAll('.letter');
-            letters.forEach((letter, index) => {
-                letter.style.animation = 'none'; 
-                letter.offsetHeight; 
-                letter.style.animation = `appear 0.5s forwards`; 
-                letter.style.animationDelay = `${index * 0.1}s`; 
-            });
-        }
-
-        
-        setInterval(restartAnimation, 15000);
     </script>
 </body>
 </html>
