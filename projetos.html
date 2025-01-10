@@ -320,51 +320,41 @@
         // Defina um limite máximo de estrelas
         const maxStars = 20; // Número máximo de estrelas na tela
         
-        // Função para criar estrelas
         function createStar() {
-            // Verifica se o número atual de estrelas é menor que o máximo permitido
             if (stars.length < maxStars) {
                 const star = document.createElement('div');
                 star.classList.add('star');
         
-                // Define a posição inicial da estrela
-                const x = Math.random() * 100; // Posição horizontal aleatória
-                const y = Math.random() * 100; // Posição vertical aleatória
+                const x = Math.random() * 100; 
+                const y = Math.random() * 100; 
                 star.style.left = x + 'vw';
                 star.style.top = y + 'vh';
-                star.style.width = Math.random() * 3 + 2 + 'px'; // Tamanho aleatório
-                star.style.height = star.style.width; // Mantém a proporção
+                star.style.width = Math.random() * 3 + 2 + 'px'; 
+                star.style.height = star.style.width; 
         
-                // Define a duração da animação
-                const fallDuration = Math.random() * 3 + 2; // Duração entre 2s e 5s
+                const fallDuration = Math.random() * 3 + 2; 
                 star.style.animationDuration = fallDuration + 's';
         
-                // Adiciona a estrela ao contêiner
                 starContainer.appendChild(star);
                 stars.push(star);
-        
-                // Remove a estrela após a animação
                 star.addEventListener('animationend', () => {
                     star.remove();
-                    stars.splice(stars.indexOf(star), 1); // Remove a estrela do array
+                    stars.splice(stars.indexOf(star), 1); 
                 });
             }
         }
         
-        // Cria estrelas em intervalos regulares
-        setInterval(createStar, 500); // Cria uma nova estrela a cada 500ms
-                // Função para reiniciar a animação
+        setInterval(createStar, 500); 
                 function restartAnimation() {
                     const letters = document.querySelectorAll('.letter');
                     letters.forEach((letter, index) => {
-                        letter.style.animation = 'none'; // Remove a animação
-                        letter.offsetHeight; // Força a reflow
-                        letter.style.animation = `appear 0.5s forwards`; // Reaplica a animação
-                        letter.style.animationDelay = `${index * 0.1}s`; // Define o atraso para cada letra
+                        letter.style.animation = 'none'; 
+                        letter.offsetHeight; 
+                        letter.style.animation = `appear 0.5s forwards`; 
+                        letter.style.animationDelay = `${index * 0.1}s`; 
                     });
                 }
         
-                // Reinicia a animação a cada 15 segundos
                 setInterval(restartAnimation, 15000);
             </script>
 </body>

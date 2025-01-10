@@ -99,7 +99,6 @@
         }
 
         .btn-bottom {
-            
             color: #fff;
             font-size: 1.3rem; 
             font-weight: bold;
@@ -122,11 +121,11 @@
             height: 100%;
             border-radius: 10px;
             border: 2px solid transparent;
+            background: linear-gradient(90deg, #333, #111, #333); /* Gradiente preto */
+            background-size: 200%;
             z-index: -1;
             transition: all 0.4s;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    background-size: 200% 200%;
-    animation: gradientAnimation 5s ease infinite;
+            animation: gradient-border 3s infinite;
         }
 
         @keyframes gradient-border {
@@ -137,7 +136,7 @@
 
         .btn-bottom:hover {
             color: #fff; 
-            border-color: transparent; /
+            border-color: transparent;
             transform: scale(1.1);
             cursor: url('imagens/outro-cursor.png'), auto; 
         }
@@ -281,7 +280,7 @@
     <div class="content">
         <header class="animated">
             <h1 class="sobre-mim-titulo">About Me</h1>
-            <p>Victor, 16y — Brazil, Espírito Santo.</p>
+            <p>Victor, 16y — Brazil</p>
 
         <div class="about-me">
             <h2>Who am I?</h2>
@@ -297,14 +296,13 @@
     </div>
 </header>
     <div class="button-container">
-        <a href="index.html" class="btn-bottom btn-left">
+        <a href="index.html" class="btn-bottom">
             ←  Back
         </a>
-        <a href="projetos.html" class="btn-bottom btn-right">
+        <a href="projetos.html" class="btn-bottom">
             Next  →
         </a>
     </div>
-
     <script>
         const stars = []; 
         const starContainer = document.querySelector('.star-container'); 
