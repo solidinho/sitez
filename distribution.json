@@ -1,0 +1,694 @@
+{
+  "version": "1.0.0",
+  "rss": "<LINK TO RSS FEED>",
+  "discord": {
+    "clientId": "1344771549671985182",
+    "smallImageText": "minecraft",
+    "smallImageKey": "logo_minecraft"
+  },
+  "servers": [
+    {
+      "id": "Solid-1.12.2",
+      "name": "Solid (Minecraft 1.12.2)",
+      "description": "Solid Rodando Minecraft 1.12.2 (Forge v14.23.5.2859)",
+      "icon": "https://cdn.discordapp.com/attachments/1249433619500630027/1344775506960060436/577a0ab4-a9b7-4792-ac04-c183746539d8_removalai_preview_1.png?ex=67c22349&is=67c0d1c9&hm=cfae2b70909baa954133cee36da31aa800fc6ef07286ba11b7cbcf481bfcb551&",
+      "version": "1.0.0",
+      "address": "fairypixelmon.vulturemc.com",
+      "minecraftVersion": "1.12.2",
+      "discord": {
+        "shortId": "Pixelmon",
+        "largeImageText": "logo",
+        "largeImageKey": "solid"
+      },
+      "mainServer": true,
+      "autoconnect": false,
+      "modules": [
+        {
+          "id": "net.minecraftforge:forge:1.12.2-14.23.5.2859:universal",
+          "name": "Minecraft Forge",
+          "type": "ForgeHosted",
+          "artifact": {
+            "size": 4466108,
+            "MD5": "fda01cd3cae80c2c6348ac3fc26e0af8",
+            "url": "https://lovetits.lol/repo/lib/net/minecraftforge/forge/1.12.2-14.23.5.2859/forge-1.12.2-14.23.5.2859-universal.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.12.2-14.23.5.2859",
+              "name": "Minecraft Forge (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 12345,
+                "MD5": "1959bb357e54a9666dd80d744b524639",
+                "url": "https://lovetits.lol/repo/versions/1.12.2-forge-14.23.5.2859/1.12.2-forge-14.23.5.2859.json"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-debug-all:5.2@jar",
+              "name": "Minecraft Forge (asm-debug-all)",
+              "type": "Library",
+              "artifact": {
+                "size": 387903,
+                "MD5": "fe5f20404ccdee9769ef05dc4b47ba98",
+                "url": "https://lovetits.lol/repo/lib/org/ow2/asm/asm-debug-all/5.2/asm-debug-all-5.2.jar"
+              }
+            },
+            {
+              "id": "net.minecraft:launchwrapper:1.12@jar",
+              "name": "Minecraft Forge (launchwrapper)",
+              "type": "Library",
+              "artifact": {
+                "size": 32999,
+                "MD5": "934b2d91c7c5be4a49577c9e6b40e8da",
+                "url": "https://lovetits.lol/repo/lib/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar"
+              }
+            },
+            {
+              "id": "org.jline:jline:3.5.1@jar",
+              "name": "Minecraft Forge (jline)",
+              "type": "Library",
+              "artifact": {
+                "size": 614590,
+                "MD5": "4c20d2879ed2bd75a0771ce29e89f6b0",
+                "url": "https://lovetits.lol/repo/lib/org/jline/jline/3.5.1/jline-3.5.1.jar"
+              }
+            },
+            {
+              "id": "com.typesafe.akka:akka-actor_2.11:2.3.3@jar",
+              "name": "Minecraft Forge (akka-actor_2.11)",
+              "type": "Library",
+              "artifact": {
+                "size": 2514991,
+                "MD5": "541440ca0819ebada47d6d1a8b3ee9e1",
+                "url": "https://lovetits.lol/repo/lib/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar"
+              }
+            },
+            {
+              "id": "com.typesafe:config:1.2.1@jar",
+              "name": "Minecraft Forge (config)",
+              "type": "Library",
+              "artifact": {
+                "size": 219554,
+                "MD5": "3aaf3c6e76a68e732c17d4a7e9877d81",
+                "url": "https://lovetits.lol/repo/lib/com/typesafe/config/1.2.1/config-1.2.1.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-actors-migration_2.11:1.1.0@jar",
+              "name": "Minecraft Forge (scala-actors-migration_2.11)",
+              "type": "Library",
+              "artifact": {
+                "size": 58018,
+                "MD5": "f5e79398daa1806f8b17311a3c782723",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-compiler:2.11.1@jar",
+              "name": "Minecraft Forge (scala-compiler)",
+              "type": "Library",
+              "artifact": {
+                "size": 13449765,
+                "MD5": "06030143bf86ca896fb6ccfd679b5760",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang.plugins:scala-continuations-library_2.11:1.0.2_mc@jar",
+              "name": "Minecraft Forge (scala-continuations-library_2.11)",
+              "type": "Library",
+              "artifact": {
+                "size": 25365,
+                "MD5": "004d7007abbcee858d3ca2c3ccbcbaab",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2_mc/scala-continuations-library_2.11-1.0.2_mc.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang.plugins:scala-continuations-plugin_2.11.1:1.0.2_mc@jar",
+              "name": "Minecraft Forge (scala-continuations-plugin_2.11.1)",
+              "type": "Library",
+              "artifact": {
+                "size": 206575,
+                "MD5": "359c4a6743a082c689039482eed78670",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2_mc/scala-continuations-plugin_2.11.1-1.0.2_mc.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-library:2.11.1@jar",
+              "name": "Minecraft Forge (scala-library)",
+              "type": "Library",
+              "artifact": {
+                "size": 5538130,
+                "MD5": "1d88f665219e6006c5dd82d71c525c0f",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-parser-combinators_2.11:1.0.1@jar",
+              "name": "Minecraft Forge (scala-parser-combinators_2.11)",
+              "type": "Library",
+              "artifact": {
+                "size": 419701,
+                "MD5": "4e694499c965af4a02599c99d4f0b196",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-reflect:2.11.1@jar",
+              "name": "Minecraft Forge (scala-reflect)",
+              "type": "Library",
+              "artifact": {
+                "size": 4372892,
+                "MD5": "7878fac044e4e4b576bb35a77ccc34fc",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-swing_2.11:1.0.1@jar",
+              "name": "Minecraft Forge (scala-swing_2.11)",
+              "type": "Library",
+              "artifact": {
+                "size": 726500,
+                "MD5": "1009d69e4948045383f2a7a334348af5",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar"
+              }
+            },
+            {
+              "id": "org.scala-lang:scala-xml_2.11:1.0.2@jar",
+              "name": "Minecraft Forge (scala-xml_2.11)",
+              "type": "Library",
+              "artifact": {
+                "size": 648679,
+                "MD5": "c2d7e66495afe14545c31b21e99879ef",
+                "url": "https://lovetits.lol/repo/lib/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar"
+              }
+            },
+            {
+              "id": "lzma:lzma:0.0.1@jar",
+              "name": "Minecraft Forge (lzma)",
+              "type": "Library",
+              "artifact": {
+                "size": 5762,
+                "MD5": "a3e3c3186e41c4a1a3027ba2bb23cdc6",
+                "url": "https://lovetits.lol/repo/lib/lzma/lzma/0.0.1/lzma-0.0.1.jar"
+              }
+            },
+            {
+              "id": "java3d:vecmath:1.5.2@jar",
+              "name": "Minecraft Forge (vecmath)",
+              "type": "Library",
+              "artifact": {
+                "size": 318956,
+                "MD5": "e5d2b7f46c4800a32f62ce75676a5710",
+                "url": "https://lovetits.lol/repo/lib/java3d/vecmath/1.5.2/vecmath-1.5.2.jar"
+              }
+            },
+            {
+              "id": "net.sf.trove4j:trove4j:3.0.3@jar",
+              "name": "Minecraft Forge (trove4j)",
+              "type": "Library",
+              "artifact": {
+                "size": 2523218,
+                "MD5": "8fc4d4e0129244f9fd39650c5f30feb2",
+                "url": "https://lovetits.lol/repo/lib/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar"
+              }
+            },
+            {
+              "id": "org.apache.maven:maven-artifact:3.5.3@jar",
+              "name": "Minecraft Forge (maven-artifact)",
+              "type": "Library",
+              "artifact": {
+                "size": 54961,
+                "MD5": "7741ebf29690ee7d9dde9cf4376347fc",
+                "url": "https://lovetits.lol/repo/lib/org/apache/maven/maven-artifact/3.5.3/maven-artifact-3.5.3.jar"
+              }
+            },
+            {
+              "id": "net.sf.jopt-simple:jopt-simple:5.0.3@jar",
+              "name": "Minecraft Forge (jopt-simple)",
+              "type": "Library",
+              "artifact": {
+                "size": 78175,
+                "MD5": "0a5ec84e23df9d7cfb4063bc55f2744c",
+                "url": "https://lovetits.lol/repo/lib/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar"
+              }
+            },
+            {
+              "id": "org.apache.logging.log4j:log4j-api:2.15.0@jar",
+              "name": "Minecraft Forge (log4j-api)",
+              "type": "Library",
+              "artifact": {
+                "size": 301804,
+                "MD5": "a9ccfa7e3382dd2b9e0647a43d8286d7",
+                "url": "https://lovetits.lol/repo/lib/org/apache/logging/log4j/log4j-api/2.15.0/log4j-api-2.15.0.jar"
+              }
+            },
+            {
+              "id": "org.apache.logging.log4j:log4j-core:2.15.0@jar",
+              "name": "Minecraft Forge (log4j-core)",
+              "type": "Library",
+              "artifact": {
+                "size": 1789769,
+                "MD5": "81e0433ae00602c0e4d00424d213b0ab",
+                "url": "https://lovetits.lol/repo/lib/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar"
+              }
+            },
+            {
+              "id": "org.apache.logging.log4j:log4j-slf4j18-impl:2.15.0@jar",
+              "name": "Minecraft Forge (log4j-slf4j18-impl)",
+              "type": "Library",
+              "artifact": {
+                "size": 21223,
+                "MD5": "196442f1bdde4dbb0f576eed616e21b0",
+                "url": "https://lovetits.lol/repo/lib/org/apache/logging/log4j/log4j-slf4j18-impl/2.15.0/log4j-slf4j18-impl-2.15.0.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "org.spongepowered.asm.launch:_mixinbootstrap:1.1.0@jar",
+          "name": "_mixinbootstrap",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1119478,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/_mixinbootstrap-1.1.0.jar",
+            "MD5": "9df0dc628ebcd787270f487fbbf8157a"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "zone.rong.mixinbooter:mixinbooter:9.1@jar",
+          "name": "MixinBooter",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1799352,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/!mixinbooter-9.1.jar",
+            "MD5": "831143e9fa112540d069ec7a3755baa6"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "guichaguri.betterfps:betterfps:1.4.8@jar",
+          "name": "BetterFps",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 155196,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/BetterFps-1.4.8.jar",
+            "MD5": "d36f4d3c0f96e99a9a1ad2e8eeda1fc4"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "net.blay09.mods:defaultoptions:9.2.8@jar",
+          "name": "Default Options",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 15056,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/DefaultOptions.jar",
+            "MD5": "5510673c0fad1e3b6617b3d97d54b3d5"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "meldexun.entityculling:entityculling:6.4.3@jar",
+          "name": "EntityCulling",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 64471,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/EntityCulling-1.12.2-6.4.3.jar",
+            "MD5": "0352844aca5151b45a6f5217dfb6d6ef"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "de.keksuccino:fancymenu:2.13.2@jar",
+          "name": "FancyMenu",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1049836,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/fancymenu-1_MC_1.12-1.12.2.jar",
+            "MD5": "a61ff5cac56305113eb44c33321b8161"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "pl.asie:foamfix:0.10.15@jar",
+          "name": "FoamFix",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 229335,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/foamfix-0.10.15.jar",
+            "MD5": "6e09e228316900fc2c1d74e18a8b790f"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "mezz.jei:jei:4.15.0.275@jar",
+          "name": "Just Enough Items",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 647930,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/jei-4.15.0.275.jar",
+            "MD5": "4c3284f41c01b2a378493d4e8c32575c"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "journeymap:journeymap:1.12.2-5.7.1@jar",
+          "name": "JourneyMap",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 6780710,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/journeymap-1.12.2-5.7.1.jar",
+            "MD5": "41f581c60bd09f207dffb76088026771"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "de.keksuccino:konkrete:1.6.0@jar",
+          "name": "Konkrete",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 618151,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/konkrete-1.12.2.jar",
+            "MD5": "1812e95a402c0aae9b1f00add7216e58"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.github.lunatrius.core:lunatriuscore:1.2.0.42@jar",
+          "name": "LunatriusCore",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 76753,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/LunatriusCore-1.12.2-1.2.0.42-universal.jar",
+            "MD5": "0dae43ef5376822db0399ad254207aa3"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "me.modmuss50.mms:mainmenuscale:1.3.2@jar",
+          "name": "Main Menu Scale",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4174,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/mainmenuscale-1.3.2.jar",
+            "MD5": "851ffaf71aad9d7977be26dce6d2f595"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "br.com.pixelmonbrasil:mapsoptimization:1.0@jar",
+          "name": "Maps Optimization",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8147,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/MapsOptimization-1.0.jar",
+            "MD5": "67f95b2e80d164bbd2a27c7dced6d0cc"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.focamacho:modmixinloader:1.0.4@jar",
+          "name": "ModMixinLoader",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 882312,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/ModMixinLoader-1.12.2-1.0.4.jar",
+            "MD5": "77d109a4edaeea5c0d512cf062dd1ae5"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "net.optifine:optifine:1.12.2_HD_U_G5@jar",
+          "name": "OptiFine 1.12.2_HD_U_G5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2457427,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/optifine-1.12.2_HD_U_G5.jar",
+            "MD5": "5d4ea8617482194f003803a7c93da5f0"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.pixelmonmod:pixelmon:8.3.8@jar",
+          "name": "Pixelmon",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 386205079,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/required/Pixelmon-1.12.2-8.3.8-universal.jar",
+            "MD5": "b231e74eadcd4c3bd012e094e3075944"
+          }
+        },
+        {
+          "id": "com.pixelmonmod:pixelmon:8.3.8@jar",
+          "name": "Pixelmon",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 386205079,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/Pixelmon-1.12.2-8.3.8-universal.jar",
+            "MD5": "b231e74eadcd4c3bd012e094e3075944"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "br.com.pixelmonbrasil.jirachi:pixelmonbrasil:1.0@jar",
+          "name": "PixelmonBrasil",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 56408,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/PixelmonBrasil-Client-1.0.2.jar",
+            "MD5": "24d3d23fc2935a344c230528d6168c95"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "technicianlp.reauth:reauth:4.0.7@jar",
+          "name": "ReAuth",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 168847,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/ReAuth-1.12-Forge-4.0.7.jar",
+            "MD5": "64ad1064003edd10b740ee33d02204e2"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "reborncore:reborncore:3.19.5@jar",
+          "name": "Reborn Core",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2285146,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/reborncore-3.19.5.jar",
+            "MD5": "7ae0f971af00b7fea64dc850be957ddc"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "meldexun.renderlib:renderlib:1.3.4@jar",
+          "name": "RenderLib",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 204706,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/RenderLib-1.12.2-1.3.4.jar",
+            "MD5": "45b42c80b4bd715532de7c2bd6d67095"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.github.lunatrius:schematica:1.8.0.169@jar",
+          "name": "Schematica",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 336150,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/Schematica-1.12.2-1.8.0.169-universal.jar",
+            "MD5": "c779a8cd4fd0e99572385a529b790c73"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.dazo66.shulkerboxshower:shulkerboxviewer:1.5@jar",
+          "name": "ShulkerBoxViewer",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 20380,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/shulkerboxviewer-1.5.jar",
+            "MD5": "0f766216cd46fa058ade087525c34d9f"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "tarikbr.singleplayerchunkfixer:SinglePlayerChunkFixer:1.0@jar",
+          "name": "SinglePlayerChunkFixer",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2398,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/SinglePlayerChunkFixer-1.0.jar",
+            "MD5": "15d437c95489d8774e1718fea7075e3a"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "net.darkhax:surge:2.0.79@jar",
+          "name": "Surge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 957330,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/Surge-2.0.79.jar",
+            "MD5": "9f495709f961117c7823827ca10df0c8"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "com.rakion99:usernamemod:1.6@jar",
+          "name": "Ingame UserName Changer",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 13759,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/usernamemod-1.12-v1.6-forgemod.jar",
+            "MD5": "a3d407e3f34ff1b87f082be466bab173"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
+          "id": "pxbr-texture.zip",
+          "name": "pxbr-texture.zip",
+          "type": "File",
+          "artifact": {
+            "size": 707393525,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/pxbr-texture.zip",
+            "MD5": "1887867a2dff303fce009ee5643526e9",
+            "path": "resourcepacks/pxbr-texture.zip"
+          }
+        },
+        {
+          "id": "ThePixelmonOST.zip",
+          "name": "ThePixelmonOST.zip",
+          "type": "File",
+          "artifact": {
+            "size": 118460410,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/ThePixelmonOST.zip",
+            "MD5": "d4f25f729a74428f0b6581844ce89cfd",
+            "path": "resourcepacks/ThePixelmonOST.zip"
+          }
+        },
+        {
+          "id": "xray-ultimate-1.12-v2.2.1.zip",
+          "name": "xray-ultimate-1.12-v2.2.1.zip",
+          "type": "File",
+          "artifact": {
+            "size": 217005,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/xray-ultimate-1.12-v2.2.1.zip",
+            "MD5": "0343575c0dd352e141ca5c547fa78543",
+            "path": "resourcepacks/xray-ultimate-1.12-v2.2.1.zip"
+          }
+        },
+        {
+          "id": "_texturepack-pxbr-cosmeticos.zip",
+          "name": "_texturepack-pxbr-cosmeticos.zip",
+          "type": "File",
+          "artifact": {
+            "size": 3701955,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/_texturepack-pxbr-cosmeticos.zip",
+            "MD5": "e341a239dbd17e355602a7f929a62b16",
+            "path": "resourcepacks/_texturepack-pxbr-cosmeticos.zip"
+          }
+        },
+        {
+          "id": "_texturepack-pxbr-extras.zip",
+          "name": "_texturepack-pxbr-extras.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1831140,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/_texturepack-pxbr-extras.zip",
+            "MD5": "63076b42a92521f8f519f2f2d5a00f5d",
+            "path": "resourcepacks/_texturepack-pxbr-extras.zip"
+          }
+        },
+        {
+          "id": "_texturepack-pxbr-hd.zip",
+          "name": "_texturepack-pxbr-hd.zip",
+          "type": "File",
+          "artifact": {
+            "size": 3075883,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/_texturepack-pxbr-hd.zip",
+            "MD5": "a05fbc77475bc5a7cb6a64f069029bd4",
+            "path": "resourcepacks/_texturepack-pxbr-hd.zip"
+          }
+        },
+        {
+          "id": "_texturepack-pxbr-sprites-hd.zip",
+          "name": "_texturepack-pxbr-sprites-hd.zip",
+          "type": "File",
+          "artifact": {
+            "size": 5535191,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/_texturepack-pxbr-sprites-hd.zip",
+            "MD5": "8e8af044a709b262d2d51298a830f5c2",
+            "path": "resourcepacks/_texturepack-pxbr-sprites-hd.zip"
+          }
+        },
+        {
+          "id": "_texturepack-pxbr-sprites.zip",
+          "name": "_texturepack-pxbr-sprites.zip",
+          "type": "File",
+          "artifact": {
+            "size": 741085,
+            "url": "https://lovetits.lol/servers/Solid-1.12.2/files/resourcepacks/_texturepack-pxbr-sprites.zip",
+            "MD5": "a65724a8a78e6ab267361e66ae8eb51a",
+            "path": "resourcepacks/_texturepack-pxbr-sprites.zip"
+          }
+        }
+      ]
+    }
+  ]
+}
