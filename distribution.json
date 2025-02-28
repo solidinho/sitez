@@ -16,31 +16,31 @@
       "address": "fairypixelmon.vulturemc.com",
       "minecraftVersion": "1.12.2",
       "discord": {
-        "shortId": "Solid Launcher",
-        "largeImageText": "SL",
+        "shortId": "Pixelmon",
+        "largeImageText": "logo",
         "largeImageKey": "solid"
       },
       "mainServer": true,
-      "autoconnect": true,
+      "autoconnect": false,
       "modules": [
         {
-          "id": "net.minecraftforge:forge:1.12.2-14.23.5.2859:universal",
+          "id": "net.minecraftforge:forge:1.12.2-14.23.5.2860:universal",
           "name": "Minecraft Forge",
           "type": "ForgeHosted",
           "artifact": {
-            "size": 4466108,
-            "MD5": "fda01cd3cae80c2c6348ac3fc26e0af8",
-            "url": "https://lovetits.lol/repo/lib/net/minecraftforge/forge/1.12.2-14.23.5.2859/forge-1.12.2-14.23.5.2859-universal.jar"
+            "size": 4466148,
+            "MD5": "2b5b6ccfa3c6ffcea9073d13d1ec5236",
+            "url": "https://lovetits.lol/repo/lib/net/minecraftforge/forge/1.12.2-14.23.5.2860/forge-1.12.2-14.23.5.2860-universal.jar"
           },
           "subModules": [
             {
-              "id": "1.12.2-14.23.5.2859",
+              "id": "1.12.2-14.23.5.2860",
               "name": "Minecraft Forge (version.json)",
               "type": "VersionManifest",
               "artifact": {
-                "size": 12345,
-                "MD5": "1959bb357e54a9666dd80d744b524639",
-                "url": "https://lovetits.lol/repo/versions/1.12.2-forge-14.23.5.2859/1.12.2-forge-14.23.5.2859.json"
+                "size": 11799,
+                "MD5": "fdf65dd024faa5c9a51372e5fb975dfe",
+                "url": "https://lovetits.lol/repo/versions/1.12.2-forge-14.23.5.2860/1.12.2-forge-14.23.5.2860.json"
               }
             },
             {
@@ -251,16 +251,6 @@
                 "size": 1789769,
                 "MD5": "81e0433ae00602c0e4d00424d213b0ab",
                 "url": "https://lovetits.lol/repo/lib/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar"
-              }
-            },
-            {
-              "id": "org.apache.logging.log4j:log4j-slf4j18-impl:2.15.0@jar",
-              "name": "Minecraft Forge (log4j-slf4j18-impl)",
-              "type": "Library",
-              "artifact": {
-                "size": 21223,
-                "MD5": "196442f1bdde4dbb0f576eed616e21b0",
-                "url": "https://lovetits.lol/repo/lib/org/apache/logging/log4j/log4j-slf4j18-impl/2.15.0/log4j-slf4j18-impl-2.15.0.jar"
               }
             }
           ]
