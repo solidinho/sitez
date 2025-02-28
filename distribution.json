@@ -4,7 +4,7 @@
   "discord": {
     "clientId": "1344771549671985182",
     "smallImageText": "minecraft",
-    "smallImageKey": "logo_minecraft"
+    "smallImageKey": "pokemon"
   },
   "servers": [
     {
@@ -16,9 +16,9 @@
       "address": "fairypixelmon.vulturemc.com",
       "minecraftVersion": "1.12.2",
       "discord": {
-        "shortId": "",
-        "largeImageText": "",
-        "largeImageKey": ""
+        "shortId": "Solid Launcher",
+        "largeImageText": "SL",
+        "largeImageKey": "solid"
       },
       "mainServer": false,
       "autoconnect": false,
