@@ -20,7 +20,7 @@
         "largeImageText": "logo",
         "largeImageKey": "solid"
       },
-      "mainServer": true,
+      "mainServer": false,
       "autoconnect": false,
       "modules": [
         {
