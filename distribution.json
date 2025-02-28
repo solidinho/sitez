@@ -16,9 +16,9 @@
       "address": "fairypixelmon.vulturemc.com",
       "minecraftVersion": "1.12.2",
       "discord": {
-        "shortId": "Pixelmon",
-        "largeImageText": "logo",
-        "largeImageKey": "solid"
+        "shortId": "",
+        "largeImageText": "",
+        "largeImageKey": ""
       },
       "mainServer": false,
       "autoconnect": false,
@@ -468,19 +468,6 @@
             "size": 386205079,
             "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/required/Pixelmon-1.12.2-8.3.8-universal.jar",
             "MD5": "b231e74eadcd4c3bd012e094e3075944"
-          }
-        },
-        {
-          "id": "com.pixelmonmod:pixelmon:8.3.8@jar",
-          "name": "Pixelmon",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 386205079,
-            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/Pixelmon-1.12.2-8.3.8-universal.jar",
-            "MD5": "b231e74eadcd4c3bd012e094e3075944"
-          },
-          "required": {
-            "value": false
           }
         },
         {
