@@ -456,7 +456,7 @@
           "type": "ForgeMod",
           "artifact": {
             "size": 386205079,
-            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/required/Pixelmon-1.12.2-8.3.8-universal.jar",
+            "url": "https://api.pixelmonbrasil.com/v2/\\pixelmon-brasil\\mods\\required\\Pixelmon-1.12.2-8.3.8-universal.jar",
             "MD5": "b231e74eadcd4c3bd012e094e3075944"
           }
         },
@@ -466,7 +466,7 @@
           "type": "ForgeMod",
           "artifact": {
             "size": 56408,
-            "url": "https://lovetits.lol/servers/Solid-1.12.2/forgemods/optionalon/PixelmonBrasil-Client-1.0.2.jar",
+            "url": "https://api.pixelmonbrasil.com/v2/\\pixelmon-brasil\\mods\\required\\Pixelmon-1.12.2-8.3.8-universal.jar",
             "MD5": "24d3d23fc2935a344c230528d6168c95"
           },
           "required": {
