@@ -8,7 +8,7 @@
   },
   "servers": [
     {
-      "id": "Solid-1.12.2",
+      "id": "solumpixelmon",
       "name": "Pixelmon",
       "description": "Minecraft Pixelmon na 1.12.2!",
       "icon": "https://solum.lol/umbreon.png",
