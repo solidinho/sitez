@@ -6,206 +6,19 @@
     <title>love tits?</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="imagens/caralho.png" type="image/png">    
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif; 
-            margin: 0;
-            padding: 0;
-            background: #000; 
-            color: #aaa; 
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            cursor: url('imagens/meu-cursor.png'), auto; 
-            position: relative; 
-        }
-
-       .particle-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none; 
-            z-index: -1; 
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.8); 
-            border-radius: 50%;
-            opacity: 0;
-            animation: float linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(50vw);
-                opacity: 0;
-            }
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100px);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-
-        .line {
-            position: absolute;
-            width: 1px; 
-            background: rgba(255, 255, 255, 0.5); 
-            pointer-events: none; 
-            transition: opacity 0.3s; 
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        header {
-            margin-bottom: 10px; 
-        }
-
-        .letter {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: appear 0.5s forwards;
-        }
-
-        @keyframes appear {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0;
-            color: #fff;
-            letter-spacing: -0.02em;
-        }
-
-        header p {
-            font-size: 1rem; 
-            margin: 5px 0 0; 
-            color: #888; 
-            animation: fadeIn 1s ease forwards; 
-            animation-delay: 0.5s; 
-        }
-
-        header img {
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-        }
-
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px; 
-        }
-
-        .btn {
-            background: #111; 
-            color: #ccc; 
-            padding: 10px 20px; 
-            font-size: 1rem; 
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: url('imagens/meu-cursor.png'), auto; 
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-            position: relative;
-            overflow: hidden;
-            text-decoration: none; 
-        }
-
-        .btn::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
-            transition: 0.4s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn:hover {
-            background: #222; 
-            color: #fff; 
-            transform: scale(1.05);
-            cursor: url('imagens/outro-cursor.png'), auto; 
-        }
-
-        .gif-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 400px; 
-            height: 400px; 
-        }
-
-        .gif-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; 
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-        }
-
-        @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated {
-    opacity: 0; 
-    animation: fadeInUp 3s ease forwards;
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="particle-container"></div>
+    <div id="particles"></div>
     <audio id="background-music" loop>
         <source src="imagens/sua-musica.mp3" type="audio/mpeg">
         Seu navegador não suporta a reprodução de áudio.
     </audio>
 
-    <div class="star-container"></div>
-    <div class="content">
+    <div id="content-slider">
+        <section class="slider-content active" id="home">
         <header class="animated">
-            <img src="imagens/lelouch.gif" alt ="Header Image">
+            <img src="imagens/lelouch.gif" alt="Header Image">
             <h1>
                 <span class="letter" style="animation-delay: 0s;">H</span>
                 <span class="letter" style="animation-delay: 0.1s;">e</span>
@@ -233,97 +46,40 @@
             <a href="https://namemc.com/profile/Solidzx" class="btn" target="_blank">/namemc</a>
         </div>
 </header>
+</section>
 
+<section class="slider-content" id="sobremim">
+    <div class="content">
+        <header class="animated">
+            <h1 class="sobre-mim-titulo">About Me</h1>
+            <p>Victor, 16y — Brazil</p>
+
+        <div class="about-me">
+            <h2>Who am I?</h2>
+            <p>I am a 16-year-old junior programmer with a strong interest in back-end development.<br>
+            I am also familiar with front-end technologies and enjoy working on both sides of development. <br>
+        My skills include languages such as<br>
+    Python, JavaScript (with Node.js for back-end development), PHP, SQL, HTML, CSS, and I am comfortable using frameworks like React.<br> </p>
+            <span style="display: block;">𝘐’𝘷𝘦 𝘣𝘦𝘦𝘯 𝘵𝘳𝘺𝘪𝘯𝘨 𝘵𝘰 𝘭𝘦𝘢𝘳𝘯 𝘑𝘢𝘷𝘢 𝘧𝘰𝘳 𝘭𝘪𝘬𝘦 𝘢 𝘺𝘦𝘢𝘳 𝘯𝘰𝘸, 𝘭𝘰𝘭. 𝘚𝘵𝘪𝘭𝘭 𝘢 𝘸𝘰𝘳𝘬 𝘪𝘯 𝘱𝘳𝘰𝘨𝘳𝘦𝘴𝘴! -_-
+        </div>
     </div>
+  </section>
+</div>
 
-<a href="sobre.html" class="btn-bottom">Next Page <span class="arrow">→</span></a>
-
-<style>
-
-.btn-bottom {
-    position: fixed; 
-    bottom: 20px; 
-    left: 20; 
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    border: 2px solid transparent;
-    padding: 15px 30px;
-    border-radius: 10px;
-    background-color: transparent; 
-    transition: all 0.3s ease;
-    overflow: hidden;
-    cursor: url('imagens/meu-cursor.png'), auto; 
-}
-
-.btn-bottom::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    background: linear-gradient(90deg, #333, #111, #333);
-    background-size: 200%;
-    z-index: -1;
-    transition: all 0.4s;
-    animation: gradient-border 3s infinite;
-}
-
-@keyframes gradient-border {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
-.btn-bottom:hover {
-    color: #fff; 
-    border-color: transparent; 
-    transform: scale(1.1); /
-    cursor: url('imagens/outro-cursor.png'), auto;
-}
-
-.btn-bottom .arrow {
-    margin-left: 10px;
-    opacity: 1; 
-    transform: translateX(0); 
-}
-</style>
-    <script>
-const audio = document.getElementById('background-music');
-
-function createParticles() {
-            const particleContainer = document.querySelector('.particle-container');
-            const numParticles = 40; 
-
-            for (let i = 0; i < numParticles; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-
-                const size = Math.random() * 2 + 2;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-
-                particle.style.left = `${Math.random() * 100}vw`;
-
-                particle.style.animationDuration = `${Math.random() * 7 + 7}s`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-
-                particleContainer.appendChild(particle);
-            }
-        }
-window.onload = () => {
-    createParticles();
-    audio.play().catch(error => {
-        console.warn("A reprodução automática foi bloqueada pelo navegador. O usuário precisa interagir.");
-    });
-};
-
-
-    </script>
+<div class="indicator">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <!-- Adicione mais dots conforme necessário -->
+  </div>
+        <script>
+    const audio = document.getElementById('background-music');
+    window.onload = () => {
+        audio.play().catch(error => {
+            console.warn("A reprodução automática foi bloqueada pelo navegador. O usuário precisa interagir.");
+        });
+    };
+        </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+            <script src="script.js"></script>
 </body>
 </html>

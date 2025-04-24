@@ -1,0 +1,393 @@
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: #000; 
+    color: #aaa; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    cursor: url('imagens/meu-cursor.png'), auto; 
+    position: relative; 
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Garante que as partículas fiquem no fundo */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50vw);
+        opacity: 0;
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.line {
+    position: absolute;
+    width: 1px; 
+    background: rgba(255, 255, 255, 0.5); 
+    pointer-events: none; 
+    transition: opacity 0.3s; 
+}
+
+.content {
+    text-align: center;
+    z-index: 1
+}
+
+header {
+    margin-bottom: 10px; 
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    font-size: 1rem; 
+    margin: 5px 0 0; 
+    color: #888; 
+    animation: fadeIn 1s ease forwards; 
+    animation-delay: 0.5s; 
+}
+
+header img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.btn {
+    background: #111; 
+    color: #ccc; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: url('imagens/meu-cursor.png'), auto; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; 
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+    transition: 0.4s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    background: #222; 
+    color: #fff; 
+    transform: scale(1.05);
+    cursor: url('imagens/outro-cursor.png'), auto; 
+}
+
+.gif-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 400px; 
+    height: 400px; 
+    z-index: 10;
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: contain; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.animated {
+opacity: 0; 
+animation: fadeInUp 3s ease forwards;
+}
+
+.btn-bottom {
+    position: fixed; 
+    bottom: 20px; 
+    left: 20; 
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: transparent; 
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: url('imagens/meu-cursor.png'), auto; 
+}
+
+.btn-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #333, #111, #333);
+    background-size: 200%;
+    z-index: -1;
+    transition: all 0.4s;
+    animation: gradient-border 3s infinite;
+}
+
+@keyframes gradient-border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.btn-bottom:hover {
+    color: #fff; 
+    border-color: transparent; 
+    transform: scale(1.1); /
+    cursor: url('imagens/outro-cursor.png'), auto;
+}
+
+.btn-bottom .arrow {
+    margin-left: 10px;
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+#content-slider {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .slider-content.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+  }
+  
+  .slider-content.previous {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  .slider-content.next {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  .indicator {
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 2;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ffffff33;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background: white;
+    transform: scale(1.4);
+    box-shadow: 0 0 8px #ffffff99;
+  }
+  
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.animated {
+    opacity: 0; 
+    animation: fadeInUp 3s ease forwards;
+}
+/* Centralizando o título "sobre-mim-titulo" e a parte relacionada ao container onde ele está */
+.sobre-mim-titulo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+/* Ajuste para os elementos internos do .sobre-mim-titulo */
+.sobre-mim-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #000000, #ffffff, #000000);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Caso o título tenha algum subtítulo ou conteúdo abaixo, garantir que os elementos fiquem em coluna */
+.about-me {
+    color: #ccc;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+.about-me h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-me p {
+    margin-bottom: 20px;
+}
+
+/* Caso você queira centralizar o título e animações em qualquer outro container, use essa classe */
+.sobre-mim-titulo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateX(-30%); 
+    }
+    50% {
+        transform: translateX(30%); 
+    }
+    100% {
+        transform: translateX(-30%); 
+    }
+}
+.sobre-mim-titulo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%; 
+    height: 2px; 
+    background: linear-gradient(90deg, #000000, #ffffff, #000000); 
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite, moveLine 3s linear infinite; 
+    transform-origin: left; 
+    overflow: hidden;
+}
+  
