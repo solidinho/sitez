@@ -1,10 +1,10 @@
 particlesJS("particles", {
   particles: {
     number: {
-      value: 52,
+      value: 62,
       density: {
         enable: true,
-        value_area: 2000
+        value_area: 1500
       }
     },
     color: {
@@ -30,7 +30,7 @@ particlesJS("particles", {
     },
     move: {
       enable: true,
-      speed: 2,
+      speed: 1.5,
       direction: "none",
       random: true,
       straight: false,
@@ -40,12 +40,13 @@ particlesJS("particles", {
   interactivity: {
     detect_on: "window",
     events: {
-      onHover: {
+      onhover: {
         enable: true,
         mode: "grab"
       },
-      onClick: {
-        enable: false
+      onclick: {
+        enable: false,
+        mode: ""
       },
       resize: true
     },
@@ -53,7 +54,7 @@ particlesJS("particles", {
       grab: {
         distance: 300,
         line_linked: {
-          opacity: 0.4
+          opacity: 0.3
         }
       }
     }
@@ -66,60 +67,83 @@ const slider = document.getElementById('content-slider');
 const dots = document.querySelectorAll('.dot');
 const slides = document.querySelectorAll('.slider-content');
 
-// Função para atualizar o slide
 function updateSlider(index) {
+  slides.forEach(slide => {
+    slide.classList.remove('active', 'previous', 'next');
+  });
+
   const previousSlide = slides[current];
   const nextSlide = slides[index];
 
-  // Adiciona a classe de transição para o slide anterior
-  previousSlide.classList.remove('active');
-  previousSlide.classList.add(index > current ? 'previous' : 'next');
-  
-  // Remove a classe de transição do próximo slide
-  nextSlide.classList.add('active');
-  nextSlide.classList.remove('next', 'previous');
-  
-  // Atualiza o índice atual
+  if (index > current) {
+    previousSlide.classList.add('previous');
+    nextSlide.classList.add('active');
+  } else if (index < current) {
+    previousSlide.classList.add('next');
+    nextSlide.classList.add('active');
+  }
+
   current = index;
 
-  // Atualiza os dots
   dots.forEach(dot => dot.classList.remove('active'));
   dots[current].classList.add('active');
 }
 
-// Função para mover para o próximo slide
 function nextSlide() {
   const next = (current + 1) % slides.length;
   updateSlider(next);
 }
 
-// Função para mover para o slide anterior
 function prevSlide() {
   const prev = (current - 1 + slides.length) % slides.length;
   updateSlider(prev);
 }
 
-// Detecção de swipe
 let startX = 0;
 
 slider.addEventListener("mousedown", (e) => startX = e.clientX);
 slider.addEventListener("mouseup", (e) => {
   let diff = e.clientX - startX;
-  if (diff < -50 && current < slides.length - 1) nextSlide();
-  else if (diff > 50 && current > 0) prevSlide();
+  if (diff < -50) nextSlide();  
+  else if (diff > 50) prevSlide();  
 });
 
 slider.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
 slider.addEventListener("touchend", (e) => {
   let diff = e.changedTouches[0].clientX - startX;
-  if (diff < -50 && current < slides.length - 1) nextSlide();
-  else if (diff > 50 && current > 0) prevSlide();
+  if (diff < -50) nextSlide();
+  else if (diff > 50) prevSlide();
 });
 
-// Clique nos dots para mudar de slide
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => updateSlider(index));
 });
 
-// Atualiza o slide inicial
-updateSlider(current);
+document.addEventListener('DOMContentLoaded', () => {
+  slides[0].classList.add('active'); 
+  dots[current].classList.add('active'); 
+});
+
+document.querySelectorAll('.card-3d').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 20;  // antes era /10 ou /5, agora mais suave
+    const rotateY = (x - centerX) / 20;
+
+    card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.10)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  });
+});
+
+
+
+
+
+

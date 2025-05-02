@@ -21,7 +21,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Garante que as partículas fiquem no fundo */
+    z-index: -1; 
+    pointer-events: none;
 }
 
 @keyframes float {
@@ -243,14 +244,14 @@ animation: fadeInUp 3s ease forwards;
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
+    justify-content: center; 
+    align-items: center;     
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     transform: translateX(100%);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
   }
   
   .slider-content.active {
@@ -293,9 +294,7 @@ animation: fadeInUp 3s ease forwards;
     background: white;
     transform: scale(1.4);
     box-shadow: 0 0 8px #ffffff99;
-  }
-  
-
+  }  
 
 @keyframes gradientAnimation {
     0% {
@@ -312,17 +311,16 @@ animation: fadeInUp 3s ease forwards;
     opacity: 0; 
     animation: fadeInUp 3s ease forwards;
 }
-/* Centralizando o título "sobre-mim-titulo" e a parte relacionada ao container onde ele está */
+
 .sobre-mim-titulo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    text-align: center; /* Centraliza o texto dentro do contêiner */
+    text-align: center; 
 }
 
-/* Ajuste para os elementos internos do .sobre-mim-titulo */
 .sobre-mim-titulo {
     font-size: 2.5em;
     font-weight: bold;
@@ -337,7 +335,6 @@ animation: fadeInUp 3s ease forwards;
     display: inline-block;
 }
 
-/* Caso o título tenha algum subtítulo ou conteúdo abaixo, garantir que os elementos fiquem em coluna */
 .about-me {
     color: #ccc;
     text-align: center;
@@ -356,7 +353,6 @@ animation: fadeInUp 3s ease forwards;
     margin-bottom: 20px;
 }
 
-/* Caso você queira centralizar o título e animações em qualquer outro container, use essa classe */
 .sobre-mim-titulo-wrapper {
     display: flex;
     justify-content: center;
@@ -390,4 +386,75 @@ animation: fadeInUp 3s ease forwards;
     transform-origin: left; 
     overflow: hidden;
 }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px;
+    perspective: 1000px;
+  }
+  
+  .card-3d {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .card-3d:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Ajusta o espaço entre o ícone e o título */
+  }
+  
+  .card-img {
+    width: 60px; /* Tamanho fixo do ícone */
+    height: 60px; /* Tamanho fixo do ícone */
+    object-fit: contain; /* Ajusta a imagem sem perder a proporção */
+  }
+  
+  .card-3d h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .card-3d p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão animado */
+  .card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #fdfdfd, #575757);
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  
+  
   
