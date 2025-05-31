@@ -419,13 +419,13 @@ animation: fadeInUp 3s ease forwards;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px; /* Ajusta o espaço entre o ícone e o título */
+    margin-bottom: 15px; 
   }
   
   .card-img {
-    width: 60px; /* Tamanho fixo do ícone */
-    height: 60px; /* Tamanho fixo do ícone */
-    object-fit: contain; /* Ajusta a imagem sem perder a proporção */
+    width: 60px; 
+    height: 60px; 
+    object-fit: contain; 
   }
   
   .card-3d h3 {
@@ -439,7 +439,6 @@ animation: fadeInUp 3s ease forwards;
     margin-bottom: 20px;
   }
   
-  /* Botão animado */
   .card-btn {
     display: inline-block;
     padding: 10px 20px;
